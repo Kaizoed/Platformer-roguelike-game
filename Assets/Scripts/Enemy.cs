@@ -1,33 +1,49 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyFollowAndPatrol : MonoBehaviour
 {
-    public float moveSpeed = 2f;
-    public Transform leftLimit, rightLimit;
+    public Transform player;
+    public float followRange = 5f;
+    public float followSpeed = 2f;
+    public float patrolSpeed = 1.5f;
 
-    private bool movingRight = true;
+    public Transform leftPoint;
+    public Transform rightPoint;
+
+    private bool isGoingRight = true;
 
     void Update()
     {
-        if (movingRight)
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+
+        if (distanceToPlayer <= followRange)
         {
-            transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
-            if (transform.position.x >= rightLimit.position.x)
-                movingRight = false;
+            // Follow player
+            Vector2 direction = (player.position - transform.position).normalized;
+            transform.position += (Vector3)direction * followSpeed * Time.deltaTime;
         }
         else
         {
-            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-            if (transform.position.x <= leftLimit.position.x)
-                movingRight = true;
+            // Patrol between leftPoint and rightPoint
+            Patrol();
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    void Patrol()
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (isGoingRight)
         {
-            other.gameObject.GetComponent<Health>()?.TakeDamage(1);
+            transform.position += Vector3.right * patrolSpeed * Time.deltaTime;
+
+            if (transform.position.x >= rightPoint.position.x)
+                isGoingRight = false;
+        }
+        else
+        {
+            transform.position += Vector3.left * patrolSpeed * Time.deltaTime;
+
+            if (transform.position.x <= leftPoint.position.x)
+                isGoingRight = true;
         }
     }
 }

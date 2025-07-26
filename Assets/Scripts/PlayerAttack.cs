@@ -10,12 +10,18 @@ public class PlayerAttack : MonoBehaviour
     public float knockbackForce = 5f;
 
     private float nextAttackTime = 0f;
+    private Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
         if (Time.time >= nextAttackTime)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0)) // Left click
             {
                 Attack();
                 nextAttackTime = Time.time + attackCooldown;
@@ -25,7 +31,13 @@ public class PlayerAttack : MonoBehaviour
 
     void Attack()
     {
-        // Detect all enemies in range
+        // Play attack animation
+        if (animator != null)
+        {
+            animator.SetTrigger("Attack");
+        }
+
+        // Detect enemies in range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
@@ -33,7 +45,6 @@ public class PlayerAttack : MonoBehaviour
             Damageable dmg = enemy.GetComponent<Damageable>();
             if (dmg != null)
             {
-                // Calculate direction to enemy
                 Vector2 knockbackDir = (enemy.transform.position - transform.position).normalized;
                 dmg.TakeDamage(attackDamage, knockbackDir * knockbackForce);
             }

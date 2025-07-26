@@ -11,21 +11,36 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isGrounded;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
         float move = Input.GetAxisRaw("Horizontal");
+
+        // ? Apply movement
         rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
 
-        // Check if grounded
+        // ? Flip sprite based on direction
+        if (move != 0)
+            spriteRenderer.flipX = move < 0;
+
+        // ? Check if grounded
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        // Jump
+        // ? Set Animator Parameters
+        animator.SetBool("isWalking", move != 0);
+        animator.SetBool("isJumping", !isGrounded && rb.linearVelocity.y > 0.1f);
+        animator.SetBool("isFalling", !isGrounded && rb.linearVelocity.y < -0.1f);
+
+        // ? Jump
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);

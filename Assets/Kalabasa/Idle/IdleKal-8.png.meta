@@ -96,7 +96,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 450
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -509,7 +509,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      IdleKal-8_0: 2439272214670927608
+      IdleKal-8_1: 1967605489629189301
+      IdleKal-8_10: 1417295938971153954
+      IdleKal-8_11: -6256970804284671867
+      IdleKal-8_12: -2739140034490375696
+      IdleKal-8_13: -109728834764016076
+      IdleKal-8_14: 7354316865334390912
+      IdleKal-8_15: -1914347316345469204
+      IdleKal-8_2: -5318262969721654341
+      IdleKal-8_3: 2501032585674273819
+      IdleKal-8_4: -8588230341771677381
+      IdleKal-8_5: -3626845625039361986
+      IdleKal-8_6: -5301125444049925302
+      IdleKal-8_7: 6987751196685106480
+      IdleKal-8_8: -4111941317360377818
+      IdleKal-8_9: -958009486880558388
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

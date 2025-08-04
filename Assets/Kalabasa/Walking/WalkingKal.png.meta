@@ -1,0 +1,688 @@
+fileFormatVersion: 2
+guid: dfe858cf3bbaa7048a58658342195b43
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1772869517987975112
+    second: WalkingKal_0
+  - first:
+      213: -1739325762702222728
+    second: WalkingKal_1
+  - first:
+      213: -8618696300668549253
+    second: WalkingKal_2
+  - first:
+      213: 8943781138554602828
+    second: WalkingKal_3
+  - first:
+      213: -3014664067760445685
+    second: WalkingKal_4
+  - first:
+      213: -6053098596290283919
+    second: WalkingKal_5
+  - first:
+      213: -5490760730854339301
+    second: WalkingKal_6
+  - first:
+      213: 3464525803048160242
+    second: WalkingKal_7
+  - first:
+      213: 8482355674864550886
+    second: WalkingKal_8
+  - first:
+      213: 3965841041595462424
+    second: WalkingKal_9
+  - first:
+      213: 3332729814921722378
+    second: WalkingKal_10
+  - first:
+      213: 2613073066786408353
+    second: WalkingKal_11
+  - first:
+      213: 6125471533444073876
+    second: WalkingKal_12
+  - first:
+      213: -8908149311688424782
+    second: WalkingKal_13
+  - first:
+      213: 6822162895479626391
+    second: WalkingKal_14
+  - first:
+      213: -113443763390653960
+    second: WalkingKal_15
+  - first:
+      213: 6240576293915557139
+    second: WalkingKal_16
+  - first:
+      213: 7080338650213374033
+    second: WalkingKal_17
+  - first:
+      213: -7474538109513040656
+    second: WalkingKal_18
+  - first:
+      213: -7742081004078040087
+    second: WalkingKal_19
+  - first:
+      213: 3611600616509985000
+    second: WalkingKal_20
+  - first:
+      213: -834159239810352506
+    second: WalkingKal_21
+  - first:
+      213: 7869442920004336085
+    second: WalkingKal_22
+  - first:
+      213: -660692353325915775
+    second: WalkingKal_23
+  - first:
+      213: -6664189863538073484
+    second: WalkingKal_24
+  - first:
+      213: -5099939887788884680
+    second: WalkingKal_25
+  - first:
+      213: -6153445215832988714
+    second: WalkingKal_26
+  - first:
+      213: 4715662270892799509
+    second: WalkingKal_27
+  - first:
+      213: 827082069099311168
+    second: WalkingKal_28
+  - first:
+      213: -6331195414993724987
+    second: WalkingKal_29
+  - first:
+      213: -4017401222275894985
+    second: WalkingKal_30
+  - first:
+      213: -8147737057718292059
+    second: WalkingKal_31
+  - first:
+      213: 2946861827660666024
+    second: WalkingKal_32
+  - first:
+      213: -6634678916067842353
+    second: WalkingKal_33
+  - first:
+      213: 433641813858012466
+    second: WalkingKal_34
+  - first:
+      213: 259811542665911979
+    second: WalkingKal_35
+  - first:
+      213: 1895137956625384616
+    second: WalkingKal_36
+  - first:
+      213: -8241313964317615976
+    second: WalkingKal_37
+  - first:
+      213: 1518475521435994406
+    second: WalkingKal_38
+  - first:
+      213: 535993984577857030
+    second: WalkingKal_39
+  - first:
+      213: -4084396980961194404
+    second: WalkingKal_40
+  - first:
+      213: 4015007249046080130
+    second: WalkingKal_41
+  - first:
+      213: 3044485765373637015
+    second: WalkingKal_42
+  - first:
+      213: 885684317340812405
+    second: WalkingKal_43
+  - first:
+      213: -8980296228998620082
+    second: WalkingKal_44
+  - first:
+      213: 1762245139492621637
+    second: WalkingKal_45
+  - first:
+      213: 2317303618428266106
+    second: WalkingKal_46
+  - first:
+      213: -85796301032742189
+    second: WalkingKal_47
+  - first:
+      213: 3333905683823180856
+    second: WalkingKal_48
+  - first:
+      213: 4704664680514391422
+    second: WalkingKal_49
+  - first:
+      213: 740442449968369288
+    second: WalkingKal_50
+  - first:
+      213: 117968094772589794
+    second: WalkingKal_51
+  - first:
+      213: 4436610304442819633
+    second: WalkingKal_52
+  - first:
+      213: 7398212274744742784
+    second: WalkingKal_53
+  - first:
+      213: -4652188030081798165
+    second: WalkingKal_54
+  - first:
+      213: 3764453944628918708
+    second: WalkingKal_55
+  - first:
+      213: -4582346762563628808
+    second: WalkingKal_56
+  - first:
+      213: 567849652380793384
+    second: WalkingKal_57
+  - first:
+      213: -5992847721851325676
+    second: WalkingKal_58
+  - first:
+      213: -6705885867791477731
+    second: WalkingKal_59
+  - first:
+      213: -5500306934487500953
+    second: WalkingKal_60
+  - first:
+      213: 5345517104768636271
+    second: WalkingKal_61
+  - first:
+      213: -7831101098941791204
+    second: WalkingKal_62
+  - first:
+      213: -3847487004743869985
+    second: WalkingKal_63
+  - first:
+      213: -5634240752310870445
+    second: WalkingKal_64
+  - first:
+      213: -6078323366995436404
+    second: WalkingKal_65
+  - first:
+      213: 8661239739403173241
+    second: WalkingKal_66
+  - first:
+      213: 2513642276707923269
+    second: WalkingKal_67
+  - first:
+      213: -5697409905753208670
+    second: WalkingKal_68
+  - first:
+      213: 1532694895416115306
+    second: WalkingKal_69
+  - first:
+      213: -4373988467884962051
+    second: WalkingKal_70
+  - first:
+      213: 37621735724362527
+    second: WalkingKal_71
+  - first:
+      213: -6283802854487488297
+    second: WalkingKal_72
+  - first:
+      213: -6516586889167925530
+    second: WalkingKal_73
+  - first:
+      213: -4187773753801625523
+    second: WalkingKal_74
+  - first:
+      213: -3835193613305543770
+    second: WalkingKal_75
+  - first:
+      213: -8846539641736676907
+    second: WalkingKal_76
+  - first:
+      213: -7861832422238272557
+    second: WalkingKal_77
+  - first:
+      213: 7349753311637054607
+    second: WalkingKal_78
+  - first:
+      213: -8847241253410396474
+    second: WalkingKal_79
+  - first:
+      213: 8498301182938965392
+    second: WalkingKal_80
+  - first:
+      213: -3092921578750792213
+    second: WalkingKal_81
+  - first:
+      213: -3898264053120715309
+    second: WalkingKal_82
+  - first:
+      213: 5560079061485805362
+    second: WalkingKal_83
+  - first:
+      213: -4388759007984387127
+    second: WalkingKal_84
+  - first:
+      213: 4935740258631524607
+    second: WalkingKal_85
+  - first:
+      213: -3800948801371728330
+    second: WalkingKal_86
+  - first:
+      213: 5123549414280846723
+    second: WalkingKal_87
+  - first:
+      213: -8957639953979534933
+    second: WalkingKal_88
+  - first:
+      213: 4226164550697526070
+    second: WalkingKal_89
+  - first:
+      213: -6048233768590149834
+    second: WalkingKal_90
+  - first:
+      213: -4716012473624923226
+    second: WalkingKal_91
+  - first:
+      213: 8412649462130615960
+    second: WalkingKal_92
+  - first:
+      213: 1530533411200139190
+    second: WalkingKal_93
+  - first:
+      213: -2891821280996137541
+    second: WalkingKal_94
+  - first:
+      213: -4328087205808896912
+    second: WalkingKal_95
+  - first:
+      213: 8532843042901058661
+    second: WalkingKal_96
+  - first:
+      213: 3700358662202265501
+    second: WalkingKal_97
+  - first:
+      213: 5203884582667659960
+    second: WalkingKal_98
+  - first:
+      213: 6155588799838674496
+    second: WalkingKal_99
+  - first:
+      213: 9148706368488259246
+    second: WalkingKal_100
+  - first:
+      213: 5125470662113437205
+    second: WalkingKal_101
+  - first:
+      213: -8599703574758257047
+    second: WalkingKal_102
+  - first:
+      213: 2123466140158690974
+    second: WalkingKal_103
+  - first:
+      213: -8456630183648101175
+    second: WalkingKal_104
+  - first:
+      213: 2844917214275812558
+    second: WalkingKal_105
+  - first:
+      213: 374772088780030495
+    second: WalkingKal_106
+  - first:
+      213: 3143392654682902164
+    second: WalkingKal_107
+  - first:
+      213: -23811109198088182
+    second: WalkingKal_108
+  - first:
+      213: 1314523765816598458
+    second: WalkingKal_109
+  - first:
+      213: -7315245541624928299
+    second: WalkingKal_110
+  - first:
+      213: -164353033429004592
+    second: WalkingKal_111
+  - first:
+      213: 7156367340183825079
+    second: WalkingKal_112
+  - first:
+      213: -2913883076615527430
+    second: WalkingKal_113
+  - first:
+      213: -3561117994760955154
+    second: WalkingKal_114
+  - first:
+      213: 8007319369205322440
+    second: WalkingKal_115
+  - first:
+      213: 1819389939162344198
+    second: WalkingKal_116
+  - first:
+      213: -4611354276989168180
+    second: WalkingKal_117
+  - first:
+      213: -2022629024082268614
+    second: WalkingKal_118
+  - first:
+      213: -3210055528664954649
+    second: WalkingKal_119
+  - first:
+      213: 7812068261950993965
+    second: WalkingKal_120
+  - first:
+      213: -6172739716909845553
+    second: WalkingKal_121
+  - first:
+      213: -425193019424748902
+    second: WalkingKal_122
+  - first:
+      213: 6366434224396715447
+    second: WalkingKal_123
+  - first:
+      213: -2904580698630895826
+    second: WalkingKal_124
+  - first:
+      213: -5467158590280316262
+    second: WalkingKal_125
+  - first:
+      213: -6105821680765415917
+    second: WalkingKal_126
+  - first:
+      213: -7132029089162073977
+    second: WalkingKal_127
+  - first:
+      213: 7738243150691811736
+    second: WalkingKal_128
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 450
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WalkingKal_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2382
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 830753301908567e0800000000000000
+      internalID: -1772869517987975112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingKal_1
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 2382
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ad2752f6cacd7e0800000000000000
+      internalID: -1739325762702222728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingKal_2
+      rect:
+        serializedVersion: 2
+        x: 2674
+        y: 2382
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b778dabd06d346880800000000000000
+      internalID: -8618696300668549253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingKal_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1191
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c45c2603f81be1c70800000000000000
+      internalID: 8943781138554602828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingKal_4
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 1191
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b072104b003c926d0800000000000000
+      internalID: -3014664067760445685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingKal_5
+      rect:
+        serializedVersion: 2
+        x: 2674
+        y: 1191
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 176b3b9b5e21ffba0800000000000000
+      internalID: -6053098596290283919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingKal_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1d43c2e436ecc3b0800000000000000
+      internalID: -5490760730854339301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingKal_7
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 0
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb4cddacd7741030800000000000000
+      internalID: 3464525803048160242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a2d50ea951747194c8719bb94c8fe8b1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WalkingKal_0: -1772869517987975112
+      WalkingKal_1: -1739325762702222728
+      WalkingKal_2: -8618696300668549253
+      WalkingKal_3: 8943781138554602828
+      WalkingKal_4: -3014664067760445685
+      WalkingKal_5: -6053098596290283919
+      WalkingKal_6: -5490760730854339301
+      WalkingKal_7: 3464525803048160242
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

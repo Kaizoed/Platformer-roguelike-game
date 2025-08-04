@@ -1,0 +1,298 @@
+fileFormatVersion: 2
+guid: f8e6cf6a8b385dc4a95ac5faf4e48c98
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6709518955229924511
+    second: SmashKal_0
+  - first:
+      213: -8472498673450068056
+    second: SmashKal_1
+  - first:
+      213: 1348310776873583338
+    second: SmashKal_2
+  - first:
+      213: 6516094325569391436
+    second: SmashKal_3
+  - first:
+      213: -3218344156494538605
+    second: SmashKal_4
+  - first:
+      213: -7754454404224047657
+    second: SmashKal_5
+  - first:
+      213: 2349060859807753311
+    second: SmashKal_6
+  - first:
+      213: -5621517562314433191
+    second: SmashKal_7
+  - first:
+      213: -2629646480752023754
+    second: SmashKal_8
+  - first:
+      213: -7412305619101317759
+    second: SmashKal_9
+  - first:
+      213: 5576189795678956929
+    second: SmashKal_10
+  - first:
+      213: 3971194380136293813
+    second: SmashKal_11
+  - first:
+      213: -8466615688568824218
+    second: SmashKal_12
+  - first:
+      213: 2518682892119726879
+    second: SmashKal_13
+  - first:
+      213: -8885032719605649111
+    second: SmashKal_14
+  - first:
+      213: -2447635171876822214
+    second: SmashKal_15
+  - first:
+      213: -5986282848195094659
+    second: SmashKal_16
+  - first:
+      213: 4800307638482789018
+    second: SmashKal_17
+  - first:
+      213: -4751978716042152905
+    second: SmashKal_18
+  - first:
+      213: 8517415588513243168
+    second: SmashKal_19
+  - first:
+      213: -2327847339014114086
+    second: SmashKal_20
+  - first:
+      213: 6020726565947828037
+    second: SmashKal_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 450
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SmashKal_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1191
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9cca34f0fffc1d50800000000000000
+      internalID: 6709518955229924511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmashKal_1
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 1191
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a75a018853ab6a80800000000000000
+      internalID: -8472498673450068056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmashKal_2
+      rect:
+        serializedVersion: 2
+        x: 2674
+        y: 1191
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae28166028926b210800000000000000
+      internalID: 1348310776873583338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmashKal_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b808ee341dd6a50800000000000000
+      internalID: 6516094325569391436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmashKal_4
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 0
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 398503b8a052653d0800000000000000
+      internalID: -3218344156494538605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: adc2327fbc611a44ebd124c365051079
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SmashKal_0: 6709518955229924511
+      SmashKal_1: -8472498673450068056
+      SmashKal_2: 1348310776873583338
+      SmashKal_3: 6516094325569391436
+      SmashKal_4: -3218344156494538605
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

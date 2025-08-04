@@ -1,0 +1,788 @@
+fileFormatVersion: 2
+guid: 78ad45d31edd57e48afe6ef08fd31686
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6588739504717537475
+    second: IdleKal_0
+  - first:
+      213: -3404530085568916254
+    second: IdleKal_1
+  - first:
+      213: 3769245327651344503
+    second: IdleKal_2
+  - first:
+      213: -2450304443139942184
+    second: IdleKal_3
+  - first:
+      213: 8138816249003673018
+    second: IdleKal_4
+  - first:
+      213: 9135458978881541595
+    second: IdleKal_5
+  - first:
+      213: 7952022893694303029
+    second: IdleKal_6
+  - first:
+      213: -7703056055584319712
+    second: IdleKal_7
+  - first:
+      213: 4279168546903479871
+    second: IdleKal_8
+  - first:
+      213: 2254303098175969284
+    second: IdleKal_9
+  - first:
+      213: -6381664484778239243
+    second: IdleKal_10
+  - first:
+      213: 5930324865289386773
+    second: IdleKal_11
+  - first:
+      213: -8543726150833458009
+    second: IdleKal_12
+  - first:
+      213: 4857373672753998220
+    second: IdleKal_13
+  - first:
+      213: 8283366039846014329
+    second: IdleKal_14
+  - first:
+      213: 892390212306093906
+    second: IdleKal_15
+  - first:
+      213: 5985356638068880145
+    second: IdleKal_16
+  - first:
+      213: -2688741236025069923
+    second: IdleKal_17
+  - first:
+      213: 3760715738608174853
+    second: IdleKal_18
+  - first:
+      213: -2522354664970597875
+    second: IdleKal_19
+  - first:
+      213: -3134526035447194714
+    second: IdleKal_20
+  - first:
+      213: 4992565165166194698
+    second: IdleKal_21
+  - first:
+      213: -4319864161831041961
+    second: IdleKal_22
+  - first:
+      213: 4730283672192328418
+    second: IdleKal_23
+  - first:
+      213: -7200696370435886082
+    second: IdleKal_24
+  - first:
+      213: -4708097040519977259
+    second: IdleKal_25
+  - first:
+      213: -2946506075148437462
+    second: IdleKal_26
+  - first:
+      213: -8585579512613242051
+    second: IdleKal_27
+  - first:
+      213: -2351074197599310833
+    second: IdleKal_28
+  - first:
+      213: -2882083593427504935
+    second: IdleKal_29
+  - first:
+      213: -9174709920769827429
+    second: IdleKal_30
+  - first:
+      213: -2762455645695302593
+    second: IdleKal_31
+  - first:
+      213: 1631391006446536870
+    second: IdleKal_32
+  - first:
+      213: 5740861539599401645
+    second: IdleKal_33
+  - first:
+      213: -6874777045996107178
+    second: IdleKal_34
+  - first:
+      213: -5908717591065455618
+    second: IdleKal_35
+  - first:
+      213: -1389311030148424060
+    second: IdleKal_36
+  - first:
+      213: -1604341952594051743
+    second: IdleKal_37
+  - first:
+      213: -6775318262255665964
+    second: IdleKal_38
+  - first:
+      213: -7632547084190902102
+    second: IdleKal_39
+  - first:
+      213: 7222722277741884103
+    second: IdleKal_40
+  - first:
+      213: -8921361761461915309
+    second: IdleKal_41
+  - first:
+      213: 3860766330267031996
+    second: IdleKal_42
+  - first:
+      213: -4515480048766809927
+    second: IdleKal_43
+  - first:
+      213: -4778040016913121555
+    second: IdleKal_44
+  - first:
+      213: 1093163832745470708
+    second: IdleKal_45
+  - first:
+      213: -4015032521409486190
+    second: IdleKal_46
+  - first:
+      213: 342562039782993761
+    second: IdleKal_47
+  - first:
+      213: 5118455463901560915
+    second: IdleKal_48
+  - first:
+      213: 5137291985808665309
+    second: IdleKal_49
+  - first:
+      213: -1867870769939769404
+    second: IdleKal_50
+  - first:
+      213: -8096334041843368832
+    second: IdleKal_51
+  - first:
+      213: 6100267209204446988
+    second: IdleKal_52
+  - first:
+      213: 3539394196135770917
+    second: IdleKal_53
+  - first:
+      213: -1014233899695577558
+    second: IdleKal_54
+  - first:
+      213: -2559137869782430920
+    second: IdleKal_55
+  - first:
+      213: 5466001150556720203
+    second: IdleKal_56
+  - first:
+      213: 6232627329365049062
+    second: IdleKal_57
+  - first:
+      213: -5674555758427439467
+    second: IdleKal_58
+  - first:
+      213: 8229676314295254080
+    second: IdleKal_59
+  - first:
+      213: 2155733811099662794
+    second: IdleKal_60
+  - first:
+      213: -6878739210385553908
+    second: IdleKal_61
+  - first:
+      213: 8258993970470260331
+    second: IdleKal_62
+  - first:
+      213: -583841691396188696
+    second: IdleKal_63
+  - first:
+      213: -4778058611900154858
+    second: IdleKal_64
+  - first:
+      213: 6325710061582142275
+    second: IdleKal_65
+  - first:
+      213: -8698368679385766487
+    second: IdleKal_66
+  - first:
+      213: -669682508750438340
+    second: IdleKal_67
+  - first:
+      213: 1993155156330380268
+    second: IdleKal_68
+  - first:
+      213: -6726734520210851633
+    second: IdleKal_69
+  - first:
+      213: -793595972214261603
+    second: IdleKal_70
+  - first:
+      213: 1893419049075375500
+    second: IdleKal_71
+  - first:
+      213: 4916299816547639778
+    second: IdleKal_72
+  - first:
+      213: -2936220770662689106
+    second: IdleKal_73
+  - first:
+      213: -4852788881740408679
+    second: IdleKal_74
+  - first:
+      213: 7554086674956440995
+    second: IdleKal_75
+  - first:
+      213: 4050634389138544774
+    second: IdleKal_76
+  - first:
+      213: -1152991190813800494
+    second: IdleKal_77
+  - first:
+      213: 3861487445370171791
+    second: IdleKal_78
+  - first:
+      213: 2752486556485501517
+    second: IdleKal_79
+  - first:
+      213: -8536942545529387763
+    second: IdleKal_80
+  - first:
+      213: 8400874534463173826
+    second: IdleKal_81
+  - first:
+      213: -8912696547374192624
+    second: IdleKal_82
+  - first:
+      213: -1584374063862839078
+    second: IdleKal_83
+  - first:
+      213: 592924224619182156
+    second: IdleKal_84
+  - first:
+      213: -2269012466789353655
+    second: IdleKal_85
+  - first:
+      213: -4939242493123010267
+    second: IdleKal_86
+  - first:
+      213: -2677625082483325254
+    second: IdleKal_87
+  - first:
+      213: -1008416087201481002
+    second: IdleKal_88
+  - first:
+      213: 2031703798996783086
+    second: IdleKal_89
+  - first:
+      213: 1004962372958516279
+    second: IdleKal_90
+  - first:
+      213: -8598367427202619270
+    second: IdleKal_91
+  - first:
+      213: -5994450389802945159
+    second: IdleKal_92
+  - first:
+      213: -1093221396590672250
+    second: IdleKal_93
+  - first:
+      213: -7674916906681964586
+    second: IdleKal_94
+  - first:
+      213: 1519115173055330278
+    second: IdleKal_95
+  - first:
+      213: -2339772279960777966
+    second: IdleKal_96
+  - first:
+      213: -2585482644217112483
+    second: IdleKal_97
+  - first:
+      213: -5449137981733782731
+    second: IdleKal_98
+  - first:
+      213: 6648454558257683523
+    second: IdleKal_99
+  - first:
+      213: -6432980758891979192
+    second: IdleKal_100
+  - first:
+      213: 8599722331146104036
+    second: IdleKal_101
+  - first:
+      213: 2621329583839499687
+    second: IdleKal_102
+  - first:
+      213: 6233572221197077947
+    second: IdleKal_103
+  - first:
+      213: -6189826072795286497
+    second: IdleKal_104
+  - first:
+      213: 1498172160198227217
+    second: IdleKal_105
+  - first:
+      213: -8776193722577562602
+    second: IdleKal_106
+  - first:
+      213: 7514975611770582251
+    second: IdleKal_107
+  - first:
+      213: -6537723359909897310
+    second: IdleKal_108
+  - first:
+      213: 2233275403265318773
+    second: IdleKal_109
+  - first:
+      213: 5089115626199842523
+    second: IdleKal_110
+  - first:
+      213: 7740681361781916788
+    second: IdleKal_111
+  - first:
+      213: 4902276592532100228
+    second: IdleKal_112
+  - first:
+      213: -8580338904064348372
+    second: IdleKal_113
+  - first:
+      213: -5698906542457417055
+    second: IdleKal_114
+  - first:
+      213: 1146491381973476540
+    second: IdleKal_115
+  - first:
+      213: 2228299986754930674
+    second: IdleKal_116
+  - first:
+      213: -7227968990112470707
+    second: IdleKal_117
+  - first:
+      213: 8582596234222934203
+    second: IdleKal_118
+  - first:
+      213: 1123397669968214982
+    second: IdleKal_119
+  - first:
+      213: -3998060104522678218
+    second: IdleKal_120
+  - first:
+      213: 2153264848731172511
+    second: IdleKal_121
+  - first:
+      213: 6598795276821311916
+    second: IdleKal_122
+  - first:
+      213: 2099797359136277609
+    second: IdleKal_123
+  - first:
+      213: 1906686535901596254
+    second: IdleKal_124
+  - first:
+      213: 5343053133982522281
+    second: IdleKal_125
+  - first:
+      213: -249487732940840817
+    second: IdleKal_126
+  - first:
+      213: -3355806370661544487
+    second: IdleKal_127
+  - first:
+      213: -4084157662061264847
+    second: IdleKal_128
+  - first:
+      213: 4252388508680545048
+    second: IdleKal_129
+  - first:
+      213: -5899732288128936486
+    second: IdleKal_130
+  - first:
+      213: 8250024566870673769
+    second: IdleKal_131
+  - first:
+      213: 6065175917997995467
+    second: IdleKal_132
+  - first:
+      213: 1672890313561492525
+    second: IdleKal_133
+  - first:
+      213: 6784323390751303991
+    second: IdleKal_134
+  - first:
+      213: 7529852401281178873
+    second: IdleKal_135
+  - first:
+      213: -4280183126761066722
+    second: IdleKal_136
+  - first:
+      213: -3533206173172639180
+    second: IdleKal_137
+  - first:
+      213: 6910846095686248145
+    second: IdleKal_138
+  - first:
+      213: 6463749657098391860
+    second: IdleKal_139
+  - first:
+      213: -1502805951410566933
+    second: IdleKal_140
+  - first:
+      213: -6514853561540988194
+    second: IdleKal_141
+  - first:
+      213: 8098650195475088421
+    second: IdleKal_142
+  - first:
+      213: -1526877217881961760
+    second: IdleKal_143
+  - first:
+      213: -8631026088354161946
+    second: IdleKal_144
+  - first:
+      213: 2415954727554739813
+    second: IdleKal_145
+  - first:
+      213: -7984525559170009576
+    second: IdleKal_146
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 450
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IdleKal_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2382
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f5abf34581094a0800000000000000
+      internalID: -6588739504717537475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleKal_1
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 2382
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e4d886dceda0c0d0800000000000000
+      internalID: -3404530085568916254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleKal_2
+      rect:
+        serializedVersion: 2
+        x: 2674
+        y: 2382
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77095f9b7ac0f4430800000000000000
+      internalID: 3769245327651344503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleKal_3
+      rect:
+        serializedVersion: 2
+        x: 4011
+        y: 2382
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8151b5715cefdd0800000000000000
+      internalID: -2450304443139942184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleKal_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1191
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab58a06d142e2f070800000000000000
+      internalID: 8138816249003673018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleKal_5
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 1191
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd513602a8ba7ce70800000000000000
+      internalID: 9135458978881541595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleKal_6
+      rect:
+        serializedVersion: 2
+        x: 2674
+        y: 1191
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53b3c60b0b24b5e60800000000000000
+      internalID: 7952022893694303029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleKal_7
+      rect:
+        serializedVersion: 2
+        x: 4011
+        y: 1191
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02799f9745f391590800000000000000
+      internalID: -7703056055584319712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleKal_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f36d4341f19a26b30800000000000000
+      internalID: 4279168546903479871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleKal_9
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 0
+        width: 1337
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40857d659b4e84f10800000000000000
+      internalID: 2254303098175969284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8385df9bdd8eac143a85f75c204755cf
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      IdleKal_0: -6588739504717537475
+      IdleKal_1: -3404530085568916254
+      IdleKal_2: 3769245327651344503
+      IdleKal_3: -2450304443139942184
+      IdleKal_4: 8138816249003673018
+      IdleKal_5: 9135458978881541595
+      IdleKal_6: 7952022893694303029
+      IdleKal_7: -7703056055584319712
+      IdleKal_8: 4279168546903479871
+      IdleKal_9: 2254303098175969284
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

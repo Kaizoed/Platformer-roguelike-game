@@ -1,92 +1,84 @@
 using UnityEngine;
 
-public class EnemyFollowAndPatrol : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
+    [Header("Follow Settings")]
     public Transform player;
     public float followRange = 5f;
     public float followSpeed = 2f;
-    public float patrolSpeed = 1.5f;
 
+    [Header("Patrol Settings")]
     public Transform leftPoint;
     public Transform rightPoint;
+    public float patrolSpeed = 1.5f;
 
     private bool isGoingRight = true;
     private Animator animator;
     private Rigidbody2D rb;
 
-    void Start()
+    void Awake()
     {
-        // Get the animator and Rigidbody2D components
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
+    void Start()
+    {
+        // If these were never assigned in the Inspector (because you're using a prefab),
+        // find them by tag or name in the scene:
+        if (player == null)
+        {
+            var p = GameObject.FindGameObjectWithTag("Player");
+            if (p != null) player = p.transform;
+        }
+
+        if (leftPoint == null)
+        {
+            var lp = GameObject.Find("LeftLimit");
+            if (lp != null) leftPoint = lp.transform;
+        }
+
+        if (rightPoint == null)
+        {
+            var rp = GameObject.Find("RightLimit");
+            if (rp != null) rightPoint = rp.transform;
+        }
+    }
+
     void Update()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        if (player == null || leftPoint == null || rightPoint == null)
+            return; // missing references, so do nothing
 
-        if (distanceToPlayer <= followRange)
-        {
-            // Follow player
-            FollowPlayer();
-        }
-        else
-        {
-            // Patrol between leftPoint and rightPoint
-            Patrol();
-        }
+        float dist = Vector2.Distance(transform.position, player.position);
+        if (dist <= followRange) FollowPlayer();
+        else Patrol();
     }
 
     void FollowPlayer()
     {
-        // Determine direction to player
-        Vector2 direction = (player.position - transform.position).normalized;
-
-        // Move the enemy towards the player
-        rb.linearVelocity = new Vector2(direction.x * followSpeed, rb.linearVelocity.y);
-
-        // Set animation based on movement
+        Vector2 dir = (player.position - transform.position).normalized;
+        rb.linearVelocity = new Vector2(dir.x * followSpeed, rb.linearVelocity.y);
         animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
-
-        // Flip the enemy's sprite based on movement direction
         FlipSprite(rb.linearVelocity.x);
     }
 
     void Patrol()
     {
-        // Move the enemy between the patrol points
-        if (isGoingRight)
-        {
-            rb.linearVelocity = new Vector2(patrolSpeed, rb.linearVelocity.y);
+        float vx = isGoingRight ? patrolSpeed : -patrolSpeed;
+        rb.linearVelocity = new Vector2(vx, rb.linearVelocity.y);
+        animator.SetFloat("Speed", Mathf.Abs(vx));
+        FlipSprite(vx);
 
-            if (transform.position.x >= rightPoint.position.x)
-                isGoingRight = false;
-        }
-        else
-        {
-            rb.linearVelocity = new Vector2(-patrolSpeed, rb.linearVelocity.y);
-
-            if (transform.position.x <= leftPoint.position.x)
-                isGoingRight = true;
-        }
-
-        // Set animation based on movement
-        animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
-
-        // Flip the enemy's sprite based on movement direction
-        FlipSprite(rb.linearVelocity.x);
+        if (isGoingRight && transform.position.x >= rightPoint.position.x) isGoingRight = false;
+        if (!isGoingRight && transform.position.x <= leftPoint.position.x) isGoingRight = true;
     }
 
-    void FlipSprite(float velocityX)
+    void FlipSprite(float vx)
     {
-        // Flip sprite based on direction (left or right)
-        if (velocityX > 0)
-        {
-            transform.localScale = new Vector3(1, 1, 1); // Facing right
-        }
-        else if (velocityX < 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1); // Facing left
-        }
+        if (vx > 0 && transform.localScale.x < 0)
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), 1, 1);
+        else if (vx < 0 && transform.localScale.x > 0)
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), 1, 1);
     }
 }

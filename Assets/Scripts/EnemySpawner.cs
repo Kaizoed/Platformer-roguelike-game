@@ -34,7 +34,7 @@ public class EnemySpawner : MonoBehaviour
         {
             flyingAI.player = player;
         }
-        else if (enemy.TryGetComponent(out EnemyFollowAndPatrol groundAI))
+        else if (enemy.TryGetComponent(out Enemy groundAI))
         {
             groundAI.player = player;
         }

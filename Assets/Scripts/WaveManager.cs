@@ -1,63 +1,46 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Collider2D))]
 public class WaveManager : MonoBehaviour
 {
-    [System.Serializable]
-    public class Wave
+    [Header("What to Spawn")]
+    public GameObject enemyPrefab;
+    [Tooltip("How many enemies to spawn immediately on start")]
+    public int spawnCount = 5;
+
+    [Header("Ground Bounds")]
+    [Tooltip("The ground collider defines the X range and spawn Y")]
+    public Collider2D groundCollider;
+    [Tooltip("Padding so enemies don't stand half off the edge")]
+    public float horizontalPadding = 0.5f;
+
+    private float minX, maxX, spawnY;
+
+    void Start()
     {
-        public GameObject enemyPrefab;
-        public int enemyCount;
-        public float spawnInterval;
-    }
-
-    public Wave[] waves;
-    public Transform[] spawnPoints;
-
-    private int currentWaveIndex = 0;
-    private int enemiesSpawned = 0;
-    private float spawnTimer = 0f;
-    private float waveCooldown = 3f; // wait between waves
-    private float waveTimer = 0f;
-    private bool waitingForNextWave = false;
-
-    void Update()
-    {
-        if (currentWaveIndex >= waves.Length) return;
-
-        Wave currentWave = waves[currentWaveIndex];
-
-        if (!waitingForNextWave)
+        if (enemyPrefab == null || groundCollider == null)
         {
-            spawnTimer += Time.deltaTime;
-
-            if (enemiesSpawned < currentWave.enemyCount && spawnTimer >= currentWave.spawnInterval)
-            {
-                SpawnEnemy(currentWave.enemyPrefab);
-                spawnTimer = 0f;
-                enemiesSpawned++;
-            }
-
-            if (enemiesSpawned >= currentWave.enemyCount)
-            {
-                waitingForNextWave = true;
-                waveTimer = 0f;
-            }
+            Debug.LogError("EnemySpawner: assign both an enemyPrefab and groundCollider.", this);
+            return;
         }
-        else
+
+        // Compute spawn bounds from the ground’s collider
+        Bounds bounds = groundCollider.bounds;
+        minX = bounds.min.x + horizontalPadding;
+        maxX = bounds.max.x - horizontalPadding;
+        spawnY = bounds.max.y; // top of the ground
+
+        // Spawn them all at once
+        for (int i = 0; i < spawnCount; i++)
         {
-            waveTimer += Time.deltaTime;
-            if (waveTimer >= waveCooldown)
-            {
-                currentWaveIndex++;
-                enemiesSpawned = 0;
-                waitingForNextWave = false;
-            }
+            SpawnOne();
         }
     }
 
-    void SpawnEnemy(GameObject enemyPrefab)
+    private void SpawnOne()
     {
-        Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-        Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+        float x = Random.Range(minX, maxX);
+        Vector2 pos = new Vector2(x, spawnY);
+        Instantiate(enemyPrefab, pos, Quaternion.identity);
     }
 }

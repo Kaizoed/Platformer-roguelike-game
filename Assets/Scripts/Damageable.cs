@@ -1,57 +1,80 @@
 using UnityEngine;
-using UnityEngine.UI;  // Import to handle UI Image components
+using UnityEngine.UI;
 
 public class Damageable : MonoBehaviour
 {
+    [Header("Health Settings")]
     public int maxHealth = 100;
     private int currentHealth;
-    public System.Action OnDeath;
 
     [Header("Knockback Settings")]
     public float knockbackResistance = 1f;
     private Rigidbody2D rb;
 
-    [Header("Health UI")]
-    public Image healthBar;  // Reference to the Image component for the health bar
+    [Header("Optional UI Health Bar (Screen)")]
+    [Tooltip("Assign only on the Player prefab")]
+    public Image uiHealthBar;
+
+    [Header("Optional World Health Bar (Prefab)")]
+    [Tooltip("Assign only on the Enemy prefab: the green Fill sprite’s Transform")]
+    public Transform worldHealthBarFill;
+    private Vector3 worldOriginalFillScale;
+
+    public System.Action OnDeath;
 
     void Start()
     {
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
 
-        // Initialize UI
-        if (healthBar != null)
+        // Init UI bar if assigned
+        if (uiHealthBar != null)
+            uiHealthBar.fillAmount = 1f;
+
+        // Init world bar if assigned
+        if (worldHealthBarFill != null)
         {
-            healthBar.fillAmount = (float)currentHealth / maxHealth;  // Set the initial fill amount
+            worldOriginalFillScale = worldHealthBarFill.localScale;
+            UpdateWorldBar();
         }
     }
 
+    /// <summary> Call this from attacks to damage + knockback </summary>
     public void TakeDamage(int amount, Vector2 knockback)
     {
-        currentHealth -= amount;
+        currentHealth = Mathf.Max(0, currentHealth - amount);
 
-        // Apply knockback if Rigidbody exists
+        // apply knockback
         if (rb != null)
-        {
             rb.AddForce(knockback / knockbackResistance, ForceMode2D.Impulse);
-        }
 
-        // Update the Health UI
-        if (healthBar != null)
-        {
-            healthBar.fillAmount = (float)currentHealth / maxHealth;  // Update the fill amount based on current health
-        }
+        // update whichever bar is present
+        if (uiHealthBar != null) UpdateUIBar();
+        if (worldHealthBarFill != null) UpdateWorldBar();
 
         if (currentHealth <= 0)
-        {
             Die();
-        }
     }
 
-    void Die()
+    private void UpdateUIBar()
+    {
+        float ratio = (float)currentHealth / maxHealth;
+        uiHealthBar.fillAmount = ratio;
+    }
+
+    private void UpdateWorldBar()
+    {
+        float ratio = (float)currentHealth / maxHealth;
+        worldHealthBarFill.localScale = new Vector3(
+            worldOriginalFillScale.x * ratio,
+            worldOriginalFillScale.y,
+            worldOriginalFillScale.z
+        );
+    }
+
+    private void Die()
     {
         OnDeath?.Invoke();
-        // Destroy or disable the object
         Destroy(gameObject);
     }
 }

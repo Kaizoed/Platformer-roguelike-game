@@ -13,7 +13,7 @@ public class Damageable : MonoBehaviour
 
     [Header("Optional UI Health Bar (Screen)")]
     [Tooltip("Assign only on the Player prefab")]
-    public Image uiHealthBar;
+    public Slider uiHealthBar;
 
     [Header("Optional World Health Bar (Prefab)")]
     [Tooltip("Assign only on the Enemy prefab: the green Fill sprite’s Transform")]
@@ -29,7 +29,7 @@ public class Damageable : MonoBehaviour
 
         // Init UI bar if assigned
         if (uiHealthBar != null)
-            uiHealthBar.fillAmount = 1f;
+            uiHealthBar.value = 1f;
 
         // Init world bar if assigned
         if (worldHealthBarFill != null)
@@ -59,7 +59,7 @@ public class Damageable : MonoBehaviour
     private void UpdateUIBar()
     {
         float ratio = (float)currentHealth / maxHealth;
-        uiHealthBar.fillAmount = ratio;
+        uiHealthBar.value = ratio;
     }
 
     private void UpdateWorldBar()

@@ -6,7 +6,7 @@ public class PlayerXP : MonoBehaviour
 {
     [Header("UI")]
     [Tooltip("The UI Image component used as the XP fill bar (must be of Type=Filled)")]
-    public Image xpFillImage;
+    public Slider xpBar;
 
     [Header("XP Settings")]
     public int currentXP = 0;
@@ -19,7 +19,7 @@ public class PlayerXP : MonoBehaviour
 
     void Start()
     {
-        if (xpFillImage == null)
+        if (xpBar == null)
             Debug.LogError("PlayerXP: xpFillImage is not assigned!", this);
         else
             UpdateXPBar();
@@ -28,10 +28,10 @@ public class PlayerXP : MonoBehaviour
     /// <summary>Updates the UI fill. Clamps between 0 and 1.</summary>
     void UpdateXPBar()
     {
-        if (xpFillImage == null) return;
+        if (xpBar == null) return;
 
         float ratio = Mathf.Clamp01((float)currentXP / xpToLevelUp);
-        xpFillImage.fillAmount = ratio;
+        xpBar.value = ratio;
 
         Debug.Log($"[PlayerXP] Bar updated: {currentXP}/{xpToLevelUp} ({ratio * 100:F1}%)");
         OnXPChanged?.Invoke(currentXP, xpToLevelUp);

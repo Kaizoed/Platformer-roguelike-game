@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,7 +21,9 @@ public class Damageable : MonoBehaviour
     public Transform worldHealthBarFill;
     private Vector3 worldOriginalFillScale;
 
-    public System.Action OnDeath;
+    public Action<Damageable> OnDeath;
+    private float lowHealthPercent = 0.1f;
+    public Action OnLow;
 
     void Start()
     {
@@ -52,6 +55,8 @@ public class Damageable : MonoBehaviour
         if (uiHealthBar != null) UpdateUIBar();
         if (worldHealthBarFill != null) UpdateWorldBar();
 
+        if (currentHealth <= maxHealth * lowHealthPercent)
+            OnLow?.Invoke();
         if (currentHealth <= 0)
             Die();
     }
@@ -74,7 +79,7 @@ public class Damageable : MonoBehaviour
 
     private void Die()
     {
-        OnDeath?.Invoke();
+        OnDeath?.Invoke(this);
         Destroy(gameObject);
     }
 }

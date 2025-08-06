@@ -27,7 +27,7 @@ public class EnemyXPReward : MonoBehaviour
             dmg.OnDeath -= GrantXP;
     }
 
-    private void GrantXP()
+    private void GrantXP(Damageable _)
     {
         Debug.Log($"{name} died → awarding {xpValue} XP");
 

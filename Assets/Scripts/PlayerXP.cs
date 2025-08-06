@@ -16,6 +16,7 @@ public class PlayerXP : MonoBehaviour
     /// Fired whenever XP changes: (currentXP, xpToLevelUp)
     /// </summary>
     public event Action<int, int> OnXPChanged;
+    public event Action<int> OnXPGained;
 
     void Start()
     {
@@ -45,6 +46,7 @@ public class PlayerXP : MonoBehaviour
             Debug.LogWarning($"PlayerXP.GainXP called with non‐positive amount: {amount}");
             return;
         }
+        OnXPGained?.Invoke(amount);
 
         Debug.Log($"[PlayerXP] Gaining {amount} XP. Before: {currentXP}/{xpToLevelUp}");
         currentXP += amount;

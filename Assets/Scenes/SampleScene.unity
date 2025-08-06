@@ -642,10 +642,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a00a51aecc9c94288bc48d0787161c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wave: 0
+  timeBeforeWave: 3
   enemyPrefab: {fileID: 5857571680226295336, guid: 015a1c0daca8a8a459f899d6ce4cdcc4, type: 3}
-  spawnCount: 5
+  spawnCountInit: 2
+  spawnMultPerLevel: 1.5
   groundCollider: {fileID: 1303450182}
   horizontalPadding: 0.5
+  spawnedEnemies: []
 --- !u!4 &768703058
 Transform:
   m_ObjectHideFlags: 0
@@ -1234,7 +1238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Wave:'
+  m_text: 'Wave: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2259,6 +2263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1920945191}
   - component: {fileID: 1920945190}
+  - component: {fileID: 1920945192}
   m_Layer: 0
   m_Name: HUDManager
   m_TagString: Untagged
@@ -2299,6 +2304,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1920945192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920945189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11af716cc647bb142bae823a9e939b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveText: {fileID: 1039481790}
+  scoreText: {fileID: 562325923}
+  playerXP: {fileID: 0}
 --- !u!1 &1935856533
 GameObject:
   m_ObjectHideFlags: 0

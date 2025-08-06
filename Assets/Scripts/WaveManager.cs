@@ -5,6 +5,8 @@ using System.Collections;
 [RequireComponent(typeof(Collider2D))]
 public class WaveManager : MonoBehaviour
 {
+    public static WaveManager instance;
+    public int wave = 0;
     public float timeBeforeWave = 3;
     [Header("What to Spawn")]
     public GameObject enemyPrefab;
@@ -22,6 +24,15 @@ public class WaveManager : MonoBehaviour
     private float minX, maxX, spawnY;
 
     public List<GameObject> spawnedEnemies = new();
+
+    public System.Action<int> OnNextWave;
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+            Destroy(gameObject);
+        instance = this;
+    }
 
     void Start()
     {
@@ -43,7 +54,8 @@ public class WaveManager : MonoBehaviour
 
     private IEnumerator StartSpawn()
     {
-
+        wave++;
+        OnNextWave?.Invoke(wave);
         yield return new WaitForSeconds(timeBeforeWave);
 
         // Spawn them all at once

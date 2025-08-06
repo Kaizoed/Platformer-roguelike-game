@@ -1,10 +1,11 @@
 using System.Collections.Generic;
-using NUnit.Framework;
 using UnityEngine;
+using System.Collections;
 
 [RequireComponent(typeof(Collider2D))]
 public class WaveManager : MonoBehaviour
 {
+    public float timeBeforeWave = 3;
     [Header("What to Spawn")]
     public GameObject enemyPrefab;
     [Tooltip("How many enemies to spawn immediately on start")]
@@ -31,16 +32,19 @@ public class WaveManager : MonoBehaviour
             return;
         }
 
-        StartSpawn();
-    }
-
-    private void StartSpawn()
-    {
         // Compute spawn bounds from the ground’s collider
         Bounds bounds = groundCollider.bounds;
         minX = bounds.min.x + horizontalPadding;
         maxX = bounds.max.x - horizontalPadding;
         spawnY = bounds.max.y; // top of the ground
+
+        StartCoroutine(StartSpawn());
+    }
+
+    private IEnumerator StartSpawn()
+    {
+
+        yield return new WaitForSeconds(timeBeforeWave);
 
         // Spawn them all at once
         for (int i = 0; i < spawnCountInit; i++)
@@ -64,7 +68,7 @@ public class WaveManager : MonoBehaviour
     private void AdvanceLevel()
     {
         spawnCountCurr = (int) Mathf.Ceil(spawnCountCurr * spawnMultPerLevel); // always round up
-        StartSpawn();
+        StartCoroutine(StartSpawn());
     }
 
     private void OnEnemyDeath(Damageable damageable)

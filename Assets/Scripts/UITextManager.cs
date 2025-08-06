@@ -14,15 +14,23 @@ public class UIWaveManager : MonoBehaviour
 
     private void Start()
     {
-        SetWave(WaveManager.instance.wave); // get wave in case it has already started;
-        WaveManager.instance.OnNextWave += SetWave;
-        var player = GameObject.FindGameObjectWithTag("Player");
-        if (player == null)
-        {
-            Debug.LogError("UIWaveManager: No GameObject with tag 'Player' found!");
-            return;
-        }
+    }
 
+    private void OnEnable()
+    {
+        WaveManager.OnNextWave += SetWave;
+        PlayerController.OnPlayerSpawn += BindToPlayer;
+    }
+
+    private void OnDestroy()
+    {
+        PlayerController.OnPlayerSpawn -= BindToPlayer;
+        WaveManager.OnNextWave -= SetWave;
+        playerXP.OnXPGained -= AddScore;
+    }
+
+    private void BindToPlayer(GameObject player)
+    {
         // Get PlayerXP component
         var xpComp = player.GetComponent<PlayerXP>();
         if (xpComp == null)
@@ -33,12 +41,6 @@ public class UIWaveManager : MonoBehaviour
 
         playerXP = xpComp;
         playerXP.OnXPGained += AddScore;
-    }
-
-    private void OnDestroy()
-    {
-        WaveManager.instance.OnNextWave -= SetWave;
-        playerXP.OnXPGained -= AddScore;
     }
 
     public void SetWave(int wave)

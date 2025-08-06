@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -13,12 +14,14 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    public static Action<GameObject> OnPlayerSpawn;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        OnPlayerSpawn?.Invoke(gameObject);
     }
 
     void Update()

@@ -28,8 +28,8 @@ public class Enemy : MonoBehaviour
         // find them by tag or name in the scene:
         if (player == null)
         {
-            var p = GameObject.FindGameObjectWithTag("Player");
-            if (p != null) player = p.transform;
+            GameObject _player = GameManager.Instance.Player;
+            if (_player != null) player = _player.transform;
         }
 
         if (leftPoint == null)

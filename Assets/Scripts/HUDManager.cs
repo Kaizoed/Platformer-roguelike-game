@@ -1,50 +1,52 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HUDManager : MonoBehaviour
 {
-    [Header("Health")]
-    public RectTransform healthFG;
-    public float maxHealth = 100;
-    public float currentHealth = 100;
+    [SerializeField] private Slider uiHP;
+    [SerializeField] private Slider uiXP;
 
-    [Header("XP")]
-    public RectTransform xpFG;
-    public float maxXP = 100;
-    public float currentXP = 0;
+    private Damageable playerHP;
+    private PlayerXP playerXP;
 
-    private float healthFullWidth;
-    private float xpFullWidth;
-
-    void Start()
+    private void OnEnable()
     {
-        healthFullWidth = healthFG.sizeDelta.x;
-        xpFullWidth = xpFG.sizeDelta.x;
-
-        UpdateHealthBar();
-        UpdateXPBar();
+        PlayerController.OnPlayerSpawn += SetTarget;
     }
 
-    public void TakeDamage(float amount)
+    private void OnDisable()
     {
-        currentHealth = Mathf.Clamp(currentHealth - amount, 0, maxHealth);
-        UpdateHealthBar();
+        PlayerController.OnPlayerSpawn -= SetTarget;
+        if (playerHP != null) playerHP.OnDamage -= UpdateHealthBar;
+        if (playerXP != null) playerXP.OnXPChanged -= UpdateXPBar;
     }
 
-    public void GainXP(float amount)
+    private void SetTarget(GameObject target)
     {
-        currentXP = Mathf.Clamp(currentXP + amount, 0, maxXP);
-        UpdateXPBar();
+        if (target.TryGetComponent<Damageable>(out var _playerHP))
+        {
+            playerHP = _playerHP;
+            playerHP.OnDamage += UpdateHealthBar;
+            UpdateHealthBar(playerHP);
+        }
+
+        if (target.TryGetComponent<PlayerXP>(out var _playerXP))
+        {
+            playerXP = _playerXP;
+            playerXP.OnXPChanged += UpdateXPBar;
+            UpdateXPBar(playerXP.currentXP, playerXP.xpToLevelUp);
+        }
     }
 
-    void UpdateHealthBar()
+    void UpdateHealthBar(Damageable damageable, GameObject _ = null)
     {
-        float width = (currentHealth / maxHealth) * healthFullWidth;
-        healthFG.sizeDelta = new Vector2(width, healthFG.sizeDelta.y);
+        int currHP = damageable.currentHealth;
+        int maxHP = damageable.maxHealth;
+        uiHP.value = (float)currHP / maxHP; // cast one to float to get float result
     }
 
-    void UpdateXPBar()
+    void UpdateXPBar(int currXP, int maxXP)
     {
-        float width = (currentXP / maxXP) * xpFullWidth;
-        xpFG.sizeDelta = new Vector2(width, xpFG.sizeDelta.y);
+        uiXP.value = (float)currXP / maxXP; // cast one to float to get float result
     }
 }

@@ -6,15 +6,11 @@ public class Damageable : MonoBehaviour
 {
     [Header("Health Settings")]
     public int maxHealth = 100;
-    private int currentHealth;
+    public int currentHealth;
 
     [Header("Knockback Settings")]
     public float knockbackResistance = 1f;
     private Rigidbody2D rb;
-
-    [Header("Optional UI Health Bar (Screen)")]
-    [Tooltip("Assign only on the Player prefab")]
-    public Slider uiHealthBar;
 
     [Header("Optional World Health Bar (Prefab)")]
     [Tooltip("Assign only on the Enemy prefab: the green Fill sprite’s Transform")]
@@ -22,17 +18,18 @@ public class Damageable : MonoBehaviour
     private Vector3 worldOriginalFillScale;
 
     public Action<Damageable, GameObject> OnDeath;
+    public Action<Damageable, GameObject> OnDamage;
     private float lowHealthPercent = 0.1f;
     public Action OnLow;
 
-    void Start()
+    private void Awake()
     {
         currentHealth = maxHealth;
-        rb = GetComponent<Rigidbody2D>();
+    }
 
-        // Init UI bar if assigned
-        if (uiHealthBar != null)
-            uiHealthBar.value = 1f;
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
 
         // Init world bar if assigned
         if (worldHealthBarFill != null)
@@ -52,19 +49,13 @@ public class Damageable : MonoBehaviour
             rb.AddForce(knockback / knockbackResistance, ForceMode2D.Impulse);
 
         // update whichever bar is present
-        if (uiHealthBar != null) UpdateUIBar();
         if (worldHealthBarFill != null) UpdateWorldBar();
+        OnDamage?.Invoke(this, damager);
 
         if (currentHealth <= maxHealth * lowHealthPercent)
             OnLow?.Invoke();
         if (currentHealth <= 0)
             Die(damager);
-    }
-
-    private void UpdateUIBar()
-    {
-        float ratio = (float)currentHealth / maxHealth;
-        uiHealthBar.value = ratio;
     }
 
     private void UpdateWorldBar()

@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 3212610995442804848}
   - component: {fileID: 5510515782201476134}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: XPSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -564,12 +564,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae872fe9349dd9040ac50d40518c60bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthFG: {fileID: 7118747361600037100}
-  maxHealth: 100
-  currentHealth: 100
-  xpFG: {fileID: 7243661964164099985}
-  maxXP: 100
-  currentXP: 0
+  uiHP: {fileID: 854082405075064808}
+  uiXP: {fileID: 5510515782201476134}
 --- !u!114 &3038442300188994353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,7 +667,7 @@ GameObject:
   - component: {fileID: 1156193162175998846}
   - component: {fileID: 854082405075064808}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: HealthSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

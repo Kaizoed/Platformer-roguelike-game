@@ -38,7 +38,7 @@ public class FlyingEnemy : MonoBehaviour
             if (dmg != null)
             {
                 Vector2 knockbackDir = hit.transform.position - transform.position;
-                dmg.TakeDamage(attackDamage, knockbackDir);
+                dmg.TakeDamage(attackDamage, knockbackDir, gameObject);
                 nextAttackTime = Time.time + attackCooldown;
             }
         }

@@ -4,10 +4,6 @@ using System;
 
 public class PlayerXP : MonoBehaviour
 {
-    [Header("UI")]
-    [Tooltip("The UI Image component used as the XP fill bar (must be of Type=Filled)")]
-    public Slider xpBar;
-
     [Header("XP Settings")]
     public int currentXP = 0;
     public int xpToLevelUp = 100;
@@ -17,26 +13,6 @@ public class PlayerXP : MonoBehaviour
     /// </summary>
     public event Action<int, int> OnXPChanged;
     public event Action<int> OnXPGained;
-
-    void Start()
-    {
-        if (xpBar == null)
-            Debug.LogError("PlayerXP: xpFillImage is not assigned!", this);
-        else
-            UpdateXPBar();
-    }
-
-    /// <summary>Updates the UI fill. Clamps between 0 and 1.</summary>
-    void UpdateXPBar()
-    {
-        if (xpBar == null) return;
-
-        float ratio = Mathf.Clamp01((float)currentXP / xpToLevelUp);
-        xpBar.value = ratio;
-
-        Debug.Log($"[PlayerXP] Bar updated: {currentXP}/{xpToLevelUp} ({ratio * 100:F1}%)");
-        OnXPChanged?.Invoke(currentXP, xpToLevelUp);
-    }
 
     /// <summary>Adds XP, handles level‐up rollover, and refreshes the bar.</summary>
     public void GainXP(int amount)
@@ -56,8 +32,7 @@ public class PlayerXP : MonoBehaviour
             currentXP -= xpToLevelUp;
             LevelUp();
         }
-
-        UpdateXPBar();
+        OnXPChanged?.Invoke(currentXP, xpToLevelUp);
     }
 
     /// <summary>Called when enough XP is collected to level up.</summary>

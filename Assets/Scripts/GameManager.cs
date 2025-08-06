@@ -1,28 +1,33 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
-    public static GameManager instance;
-    public GameObject player;
+    public GameObject Player { get; private set; }
     [SerializeField] private Transform playerSpawnPoint;
 
-    private void Awake()
+    protected override void Awake()
     {
-        if (instance == null)
-            instance = this;
-        else
-            Destroy(gameObject);
+        base.Awake();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Instantiate(playerSpawnPoint);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        PlayerController.OnPlayerSpawn += SetPlayer;
+    }
+
+    private void OnDisable()
+    {
+        PlayerController.OnPlayerSpawn -= SetPlayer;
+    }
+
+    void SetPlayer(GameObject player)
+    {
+        Player = player;
     }
 }

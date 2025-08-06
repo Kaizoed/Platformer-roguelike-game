@@ -5,7 +5,6 @@ using System.Collections;
 [RequireComponent(typeof(Collider2D))]
 public class WaveManager : MonoBehaviour
 {
-    public static WaveManager instance;
     public int wave = 0;
     public float timeBeforeWave = 3;
     [Header("What to Spawn")]
@@ -25,14 +24,7 @@ public class WaveManager : MonoBehaviour
 
     public List<GameObject> spawnedEnemies = new();
 
-    public System.Action<int> OnNextWave;
-
-    private void Awake()
-    {
-        if (instance != null && instance != this)
-            Destroy(gameObject);
-        instance = this;
-    }
+    public static System.Action<int> OnNextWave;
 
     void Start()
     {

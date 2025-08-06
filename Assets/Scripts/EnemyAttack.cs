@@ -23,16 +23,19 @@ public class EnemyAttack : MonoBehaviour
         // Check if cooldown has passed before allowing another attack
         if (Time.time >= nextAttackTime)
         {
-            Attack();
+            Ready();
             nextAttackTime = Time.time + attackCooldown;  // Reset the cooldown
         }
     }
 
-    void Attack()
+    void Ready()
     {
         // Trigger the attack animation
         animator.SetTrigger("Attack");
+    }
 
+    void Attack()
+    {
         // Detect players within attack range
         Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
 

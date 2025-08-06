@@ -29,8 +29,7 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
 
         // ? Flip sprite based on direction
-        if (move != 0)
-            spriteRenderer.flipX = move < 0;
+        FlipSprite(move);
 
         // ? Check if grounded
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
@@ -45,6 +44,14 @@ public class PlayerController : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
+    }
+
+    void FlipSprite(float vx)
+    {
+        if (vx > 0 && transform.localScale.x < 0)
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
+        else if (vx < 0 && transform.localScale.x > 0)
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
     }
 
     // Draw ground check gizmo in Scene view

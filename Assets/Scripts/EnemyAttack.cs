@@ -54,7 +54,7 @@ public class EnemyAttack : MonoBehaviour
                 Vector2 knockback = knockbackDir * knockbackForce;
 
                 // Apply damage and knockback to the player
-                dmg.TakeDamage(attackDamage, knockback);
+                dmg.TakeDamage(attackDamage, knockback, gameObject);
                 Debug.Log($"Damage applied to {player.name} with knockback!");
             }
         }

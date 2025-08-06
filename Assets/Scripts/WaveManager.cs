@@ -83,7 +83,7 @@ public class WaveManager : MonoBehaviour
         StartCoroutine(StartSpawn());
     }
 
-    private void OnEnemyDeath(Damageable damageable)
+    private void OnEnemyDeath(Damageable damageable, GameObject killer)
     {
         spawnedEnemies.Remove(damageable.gameObject);
 

@@ -27,27 +27,19 @@ public class EnemyXPReward : MonoBehaviour
             dmg.OnDeath -= GrantXP;
     }
 
-    private void GrantXP(Damageable _)
+    private void GrantXP(Damageable _, GameObject killer)
     {
         Debug.Log($"{name} died → awarding {xpValue} XP");
 
-        // Find player by tag
-        var player = GameObject.FindGameObjectWithTag("Player");
-        if (player == null)
-        {
-            Debug.LogError("EnemyXPReward: No GameObject with tag 'Player' found!");
-            return;
-        }
-
         // Get PlayerXP component
-        var xpComp = player.GetComponent<PlayerXP>();
+        var xpComp = killer.GetComponent<PlayerXP>();
         if (xpComp != null)
         {
             xpComp.GainXP(xpValue);
         }
         else
         {
-            Debug.LogError("EnemyXPReward: PlayerXP component missing on Player!");
+            Debug.LogError("EnemyXPReward: Killer does not have PlayerXP component");
         }
     }
 }

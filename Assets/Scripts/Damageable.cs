@@ -21,7 +21,7 @@ public class Damageable : MonoBehaviour
     public Transform worldHealthBarFill;
     private Vector3 worldOriginalFillScale;
 
-    public Action<Damageable> OnDeath;
+    public Action<Damageable, GameObject> OnDeath;
     private float lowHealthPercent = 0.1f;
     public Action OnLow;
 
@@ -43,7 +43,7 @@ public class Damageable : MonoBehaviour
     }
 
     /// <summary> Call this from attacks to damage + knockback </summary>
-    public void TakeDamage(int amount, Vector2 knockback)
+    public void TakeDamage(int amount, Vector2 knockback, GameObject damager)
     {
         currentHealth = Mathf.Max(0, currentHealth - amount);
 
@@ -58,7 +58,7 @@ public class Damageable : MonoBehaviour
         if (currentHealth <= maxHealth * lowHealthPercent)
             OnLow?.Invoke();
         if (currentHealth <= 0)
-            Die();
+            Die(damager);
     }
 
     private void UpdateUIBar()
@@ -77,9 +77,9 @@ public class Damageable : MonoBehaviour
         );
     }
 
-    private void Die()
+    private void Die(GameObject killer)
     {
-        OnDeath?.Invoke(this);
+        OnDeath?.Invoke(this, killer);
         Destroy(gameObject);
     }
 }

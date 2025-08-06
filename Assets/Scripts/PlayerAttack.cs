@@ -50,7 +50,7 @@ public class PlayerAttack : MonoBehaviour
                 Vector2 knockbackDir = (enemy.transform.position - transform.position).normalized;
 
                 // Apply damage and knockback to the enemy
-                dmg.TakeDamage(attackDamage, knockbackDir * knockbackForce);
+                dmg.TakeDamage(attackDamage, knockbackDir * knockbackForce, gameObject);
             }
         }
     }

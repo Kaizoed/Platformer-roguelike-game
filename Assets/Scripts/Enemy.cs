@@ -77,8 +77,8 @@ public class Enemy : MonoBehaviour
     void FlipSprite(float vx)
     {
         if (vx > 0 && transform.localScale.x < 0)
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), 1, 1);
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
         else if (vx < 0 && transform.localScale.x > 0)
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), 1, 1);
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
     }
 }

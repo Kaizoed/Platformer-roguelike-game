@@ -4,6 +4,7 @@ public class PlayerAttack : MonoBehaviour
 {
     public Transform attackPoint;
     public float attackRange = 0.5f;
+    [SerializeField] private float attackRangeScaled = 0.5f;
     public LayerMask enemyLayers;
     public int attackDamage = 25;
     public float attackCooldown = 0.5f;  // Cooldown between attacks
@@ -15,6 +16,7 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        SetAttackRange();
     }
 
     void Update()
@@ -39,7 +41,7 @@ public class PlayerAttack : MonoBehaviour
         }
 
         // Detect enemies within the attack range using OverlapCircleAll
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRangeScaled, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
@@ -54,13 +56,17 @@ public class PlayerAttack : MonoBehaviour
             }
         }
     }
+    void SetAttackRange()
+    {
+        attackRangeScaled = attackRange * transform.localScale.x; // Scale the attack range based on enemy size
+    }
 
     // Visualize the attack range in the Scene view with Gizmos
     void OnDrawGizmosSelected()
     {
         if (attackPoint == null) return;
-
+        SetAttackRange();
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);  // Show the range as a yellow sphere
+        Gizmos.DrawWireSphere(attackPoint.position, attackRangeScaled);  // Show the range as a yellow sphere
     }
 }

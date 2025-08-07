@@ -139,7 +139,7 @@ MonoBehaviour:
   jumpForce: 12
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   groundCheck: {fileID: 5229870576532847021}
   groundCheckRadius: 0.2
 --- !u!70 &2179097632230969275
@@ -192,7 +192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 3161332559932004770}
-  attackRange: 1
+  attackRange: 2.25
+  attackRangeScaled: 2.2
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -212,8 +213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  currentHealth: 0
   knockbackResistance: 0.5
-  uiHealthBar: {fileID: 0}
   worldHealthBarFill: {fileID: 0}
 --- !u!95 &7683355755243229097
 Animator:
@@ -249,7 +250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71611f80504fb644da87eae0916be4ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xpBar: {fileID: 0}
   currentXP: 0
   xpToLevelUp: 100
 --- !u!1 &2854661315559758986
@@ -277,7 +277,7 @@ Transform:
   m_GameObject: {fileID: 2854661315559758986}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.87, y: 1, z: 0}
+  m_LocalPosition: {x: 1, y: 1, z: 0}
   m_LocalScale: {x: 35.25, y: 104.24251, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

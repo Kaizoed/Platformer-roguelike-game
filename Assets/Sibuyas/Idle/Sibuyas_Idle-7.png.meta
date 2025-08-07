@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: 9f008f56171de65498c8e8a232722b2f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8454336719413659552
+    second: Sibuyas_Idle-7_0
+  - first:
+      213: -5734730180344649526
+    second: Sibuyas_Idle-7_1
+  - first:
+      213: -437220897080089694
+    second: Sibuyas_Idle-7_2
+  - first:
+      213: 6083796185603045283
+    second: Sibuyas_Idle-7_3
+  - first:
+      213: -8159981624086212843
+    second: Sibuyas_Idle-7_4
+  - first:
+      213: -6019965781751472226
+    second: Sibuyas_Idle-7_5
+  - first:
+      213: -6523908564977713868
+    second: Sibuyas_Idle-7_6
+  - first:
+      213: -204244812055666539
+    second: Sibuyas_Idle-7_7
+  - first:
+      213: 4981399642011665512
+    second: Sibuyas_Idle-7_8
+  - first:
+      213: -7306348907289988668
+    second: Sibuyas_Idle-7_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sibuyas_Idle-7_0
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 761
+        width: 562
+        height: 770
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a7413c0476d35570800000000000000
+      internalID: 8454336719413659552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibuyas_Idle-7_1
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 1057
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac868dde8452a60b0800000000000000
+      internalID: -5734730180344649526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibuyas_Idle-7_2
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 1053
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a3e92d19edaee9f0800000000000000
+      internalID: -437220897080089694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibuyas_Idle-7_3
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 740
+        width: 62
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a7feb0c56cfd6450800000000000000
+      internalID: 6083796185603045283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibuyas_Idle-7_4
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 755
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f40a242fbe1ce80800000000000000
+      internalID: -8159981624086212843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibuyas_Idle-7_5
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 691
+        width: 96
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9f52b24409c47ca0800000000000000
+      internalID: -6019965781751472226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibuyas_Idle-7_6
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 634
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43dff5da9bb6675a0800000000000000
+      internalID: -6523908564977713868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibuyas_Idle-7_7
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 626
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 590a432fc606a2df0800000000000000
+      internalID: -204244812055666539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibuyas_Idle-7_8
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 627
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8640d52f49c712540800000000000000
+      internalID: 4981399642011665512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sibuyas_Idle-7_9
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 603
+        width: 76
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c1bae72162aa9a90800000000000000
+      internalID: -7306348907289988668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sibuyas_Idle-7_0: 8454336719413659552
+      Sibuyas_Idle-7_1: -5734730180344649526
+      Sibuyas_Idle-7_2: -437220897080089694
+      Sibuyas_Idle-7_3: 6083796185603045283
+      Sibuyas_Idle-7_4: -8159981624086212843
+      Sibuyas_Idle-7_5: -6019965781751472226
+      Sibuyas_Idle-7_6: -6523908564977713868
+      Sibuyas_Idle-7_7: -204244812055666539
+      Sibuyas_Idle-7_8: 4981399642011665512
+      Sibuyas_Idle-7_9: -7306348907289988668
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

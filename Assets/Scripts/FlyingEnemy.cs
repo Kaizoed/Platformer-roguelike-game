@@ -14,13 +14,23 @@ public class FlyingEnemy : MonoBehaviour
 
     private float nextAttackTime = 0f;
 
+    // Animator for attack animations
+    public Animator animator;
+
+    private Rigidbody2D rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>(); // Get the Rigidbody2D component
+    }
+
     void Update()
     {
         if (player == null) return;
 
         // Move toward player
         Vector2 direction = (player.position - transform.position).normalized;
-        transform.position += (Vector3)direction * speed * Time.deltaTime;
+        rb.linearVelocity = direction * speed;  // Move with Rigidbody2D
 
         // Try attacking
         TryAttack();
@@ -30,6 +40,10 @@ public class FlyingEnemy : MonoBehaviour
     {
         if (Time.time < nextAttackTime) return;
 
+        // Trigger attack animation
+        animator.SetTrigger("Attack");  // Trigger attack animation
+
+        // Detect players within the attack range
         Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
 
         foreach (Collider2D hit in hitPlayers)
@@ -48,6 +62,6 @@ public class FlyingEnemy : MonoBehaviour
     {
         if (attackPoint == null) return;
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange); // Visualize attack range
     }
 }

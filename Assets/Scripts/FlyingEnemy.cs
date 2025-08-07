@@ -19,6 +19,11 @@ public class FlyingEnemy : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    [Header("Patrol Settings")]
+    public Transform leftPoint;  // Left patrol point
+    public Transform rightPoint; // Right patrol point
+    private bool isGoingRight = true;  // Direction flag for patrol
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // Get the Rigidbody2D component
@@ -28,12 +33,29 @@ public class FlyingEnemy : MonoBehaviour
     {
         if (player == null) return;
 
-        // Move toward player
-        Vector2 direction = (player.position - transform.position).normalized;
-        rb.linearVelocity = direction * speed;  // Move with Rigidbody2D
+        // Patrol logic: Move back and forth between left and right points
+        Patrol();
 
         // Try attacking
         TryAttack();
+    }
+
+    void Patrol()
+    {
+        float direction = isGoingRight ? 1f : -1f; // Determines if moving right or left
+
+        // Move the enemy in the chosen direction
+        rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
+
+        // Check if enemy has reached either the left or right point
+        if (transform.position.x >= rightPoint.position.x && isGoingRight)
+        {
+            isGoingRight = false; // Start moving left
+        }
+        else if (transform.position.x <= leftPoint.position.x && !isGoingRight)
+        {
+            isGoingRight = true; // Start moving right
+        }
     }
 
     void TryAttack()
@@ -61,7 +83,14 @@ public class FlyingEnemy : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         if (attackPoint == null) return;
+
+        // Visualize attack range
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange); // Visualize attack range
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+
+        // Visualize patrol points in Scene view (left and right patrol points)
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(leftPoint.position, 0.2f);  // Left patrol point
+        Gizmos.DrawWireSphere(rightPoint.position, 0.2f); // Right patrol point
     }
 }

@@ -19,8 +19,6 @@ public class Damageable : MonoBehaviour
 
     public Action<Damageable, GameObject> OnDeath;
     public Action<Damageable, GameObject> OnDamage;
-    private float lowHealthPercent = 0.1f;
-    public Action OnLow;
 
     private void Awake()
     {
@@ -52,8 +50,6 @@ public class Damageable : MonoBehaviour
         if (worldHealthBarFill != null) UpdateWorldBar();
         OnDamage?.Invoke(this, damager);
 
-        if (currentHealth <= maxHealth * lowHealthPercent)
-            OnLow?.Invoke();
         if (currentHealth <= 0)
             Die(damager);
     }

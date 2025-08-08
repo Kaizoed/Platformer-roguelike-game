@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3040071319970622801}
   - component: {fileID: 5082599166623314954}
   - component: {fileID: 5215131607789546479}
+  - component: {fileID: 1059278024004793108}
   - component: {fileID: 8474235833793139978}
   - component: {fileID: 2179097632230969275}
   - component: {fileID: 7924761516888877100}
@@ -123,6 +124,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1059278024004793108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2407498887315386191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b30758769f8ae4c9bc4e5e725786b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerXP: {fileID: 1785142384066786172}
+  playerController: {fileID: 8474235833793139978}
+  playerAttack: {fileID: 7924761516888877100}
+  playerHP: {fileID: 3799022278379896793}
 --- !u!114 &8474235833793139978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,8 +229,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d053b8b45b1b9f146b0f792e2384731f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 1
   maxHealth: 100
   currentHealth: 0
+  regen: 0
+  regenTime: 1
   knockbackResistance: 0.5
   worldHealthBarFill: {fileID: 0}
 --- !u!95 &7683355755243229097

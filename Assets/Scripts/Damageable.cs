@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class Damageable : MonoBehaviour
 {
+    public bool isPlayer = false; // true if this is the player, false if it's an enemy
     [Header("Health Settings")]
     public int maxHealth = 100;
     public int currentHealth;
@@ -67,6 +68,19 @@ public class Damageable : MonoBehaviour
     private void Die(GameObject killer)
     {
         OnDeath?.Invoke(this, killer);
-        Destroy(gameObject);
+        if (isPlayer) Destroy(gameObject);
+        else // destroy parent of this object instead
+        {
+            // If this is an enemy, destroy the parent GameObject
+            Transform parent = transform.parent;
+            if (parent != null)
+            {
+                Destroy(parent.gameObject);
+            }
+            else
+            {
+                Debug.LogWarning("Damageable: No parent found to destroy.");
+            }
+        }
     }
 }

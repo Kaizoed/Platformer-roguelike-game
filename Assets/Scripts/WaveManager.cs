@@ -24,7 +24,7 @@ public class WaveManager : MonoBehaviour
 
     private float minX, maxX, spawnY;
 
-    public List<GameObject> spawnedEnemies = new();
+    public List<Damageable> spawnedEnemies = new();
 
     public static System.Action<int> OnNextWave;
 
@@ -75,11 +75,12 @@ public class WaveManager : MonoBehaviour
         Vector2 pos = new Vector2(x, spawnY);
 
         GameObject enemy = isFlyingEnemy ? Instantiate(flyingEnemyPrefab, pos, Quaternion.identity) : Instantiate(enemyPrefab, pos, Quaternion.identity);
-
-        Damageable damageable = enemy.GetComponent<Damageable>();
+        
+        // get damageable from children
+        Damageable damageable = enemy.GetComponentInChildren<Damageable>();
         damageable.OnDeath += OnEnemyDeath;
 
-        spawnedEnemies.Add(enemy);
+        spawnedEnemies.Add(damageable);
     }
 
     private void AdvanceLevel()
@@ -90,7 +91,7 @@ public class WaveManager : MonoBehaviour
 
     private void OnEnemyDeath(Damageable damageable, GameObject killer)
     {
-        spawnedEnemies.Remove(damageable.gameObject);
+        spawnedEnemies.Remove(damageable);
 
         if (spawnedEnemies.Count != 0)
             return;

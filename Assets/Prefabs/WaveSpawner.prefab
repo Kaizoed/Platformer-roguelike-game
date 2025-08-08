@@ -46,7 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wave: 0
   timeBeforeWave: 3
-  enemyPrefab: {fileID: 5857571680226295336, guid: 015a1c0daca8a8a459f899d6ce4cdcc4, type: 3}
+  enemyPrefab: {fileID: 6620399555412727242, guid: 015a1c0daca8a8a459f899d6ce4cdcc4, type: 3}
+  flyingEnemyPrefab: {fileID: 3819844924129644250, guid: 7a39d4d4b46ea9847b409a06c4ee6602, type: 3}
   spawnCountInit: 2
   spawnMultPerLevel: 1.5
   groundCollider: {fileID: 0}

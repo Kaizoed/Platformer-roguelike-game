@@ -7,8 +7,10 @@ public class WaveManager : MonoBehaviour
 {
     public int wave = 0;
     public float timeBeforeWave = 3;
+
     [Header("What to Spawn")]
-    public GameObject enemyPrefab;
+    public GameObject enemyPrefab;               // Regular enemy prefab
+    public GameObject flyingEnemyPrefab;         // Flying enemy prefab
     [Tooltip("How many enemies to spawn immediately on start")]
     public int spawnCountInit = 5;
     private int spawnCountCurr;
@@ -29,9 +31,9 @@ public class WaveManager : MonoBehaviour
     void Start()
     {
         spawnCountCurr = spawnCountInit;
-        if (enemyPrefab == null || groundCollider == null)
+        if (enemyPrefab == null || flyingEnemyPrefab == null || groundCollider == null)
         {
-            Debug.LogError("EnemySpawner: assign both an enemyPrefab and groundCollider.", this);
+            Debug.LogError("EnemySpawner: assign both an enemyPrefab, flyingEnemyPrefab, and groundCollider.", this);
             return;
         }
 
@@ -50,18 +52,29 @@ public class WaveManager : MonoBehaviour
         OnNextWave?.Invoke(wave);
         yield return new WaitForSeconds(timeBeforeWave);
 
-        // Spawn them all at once
+        // Spawn enemies based on wave
         for (int i = 0; i < spawnCountInit; i++)
         {
-            SpawnOne();
+            // Check if it's wave 5 or greater and spawn randomly
+            if (wave >= 5)
+            {
+                bool spawnFlyingEnemy = Random.Range(0, 2) == 0;  // Randomly choose between ground or flying
+                SpawnOne(spawnFlyingEnemy);  // Pass true for flying, false for ground
+            }
+            else
+            {
+                // Only spawn ground enemies for waves below 5
+                SpawnOne(false);  // false means spawn ground enemy
+            }
         }
     }
 
-    private void SpawnOne()
+    private void SpawnOne(bool isFlyingEnemy)
     {
         float x = Random.Range(minX, maxX);
         Vector2 pos = new Vector2(x, spawnY);
-        GameObject enemy = Instantiate(enemyPrefab, pos, Quaternion.identity);
+
+        GameObject enemy = isFlyingEnemy ? Instantiate(flyingEnemyPrefab, pos, Quaternion.identity) : Instantiate(enemyPrefab, pos, Quaternion.identity);
 
         Damageable damageable = enemy.GetComponent<Damageable>();
         damageable.OnDeath += OnEnemyDeath;
@@ -71,7 +84,7 @@ public class WaveManager : MonoBehaviour
 
     private void AdvanceLevel()
     {
-        spawnCountCurr = (int) Mathf.Ceil(spawnCountCurr * spawnMultPerLevel); // always round up
+        spawnCountCurr = (int)Mathf.Ceil(spawnCountCurr * spawnMultPerLevel); // always round up
         StartCoroutine(StartSpawn());
     }
 

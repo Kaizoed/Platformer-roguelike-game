@@ -16,9 +16,11 @@ MonoBehaviour:
   description: Boosts your walking speed
   powerUpType: 2
   healthBoost: 0
+  regen: 0
   damageBoost: 0
   attackspeedboost: 0
-  speedBoost: 5
+  speedBoost: 1
   burnDamagePerSecond: 0
+  jumpBoost: 0
   burnDuration: 0
   cardIcon: {fileID: -9083362998159298969, guid: 060180d80f665a2479a481946dcd8ea5, type: 3}

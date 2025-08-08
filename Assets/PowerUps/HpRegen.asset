@@ -15,10 +15,12 @@ MonoBehaviour:
   powerUpName: Hp Regen
   description: Regenerates Health Overtime
   powerUpType: 6
-  healthBoost: 5
+  healthBoost: 10
+  regen: 5
   damageBoost: 0
   attackspeedboost: 0
   speedBoost: 0
   burnDamagePerSecond: 0
+  jumpBoost: 0
   burnDuration: 0
   cardIcon: {fileID: -1049461823314036041, guid: 8067f985f98f5ea4b8542bfc91735252, type: 3}

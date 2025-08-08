@@ -16,9 +16,11 @@ MonoBehaviour:
   description: Makes you attack faster
   powerUpType: 4
   healthBoost: 0
+  regen: 0
   damageBoost: 0
-  attackspeedboost: 10
+  attackspeedboost: 1.25
   speedBoost: 0
   burnDamagePerSecond: 0
+  jumpBoost: 0
   burnDuration: 0
   cardIcon: {fileID: -6193045152456746639, guid: 69b5c596989763144a97ed5318f47bc6, type: 3}

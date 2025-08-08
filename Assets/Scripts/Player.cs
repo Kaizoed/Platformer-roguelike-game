@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     {
         switch (powerUp.powerUpType)
         {
-            case PowerUpType.Health:
+            case PowerUpType.HPRegen:
                 playerHP.currentHealth += powerUp.healthBoost;
                 playerHP.maxHealth += powerUp.healthBoost;
                 playerHP.regen += powerUp.regen;

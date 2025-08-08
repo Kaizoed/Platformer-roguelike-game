@@ -231,11 +231,9 @@ MonoBehaviour:
   availablePowerUps:
   - {fileID: 11400000, guid: b65ba87f4702f8b479bc4ba7ad2e1c01, type: 2}
   - {fileID: 11400000, guid: 8c510f65955601f429f43ecf10b12ad4, type: 2}
-  - {fileID: 11400000, guid: 1e2e747b83e4c1343abcf5a89ac47f00, type: 2}
   - {fileID: 11400000, guid: 61d849a7958c9ae4f8ea8b60cbe25af3, type: 2}
   - {fileID: 11400000, guid: dc8aefe1c2ca6f844aedde1eca0fdc4d, type: 2}
   - {fileID: 11400000, guid: 684d2a63d3a43b149a9b7ab1d24a8b11, type: 2}
-  - {fileID: 11400000, guid: 8e88887356c20794d82f0ad687fa3db2, type: 2}
   upgradeButtons:
   - {fileID: 7922287189977725303}
   - {fileID: 5077596059053670101}

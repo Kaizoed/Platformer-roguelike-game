@@ -16,9 +16,11 @@ MonoBehaviour:
   description: Boosts your jumping power
   powerUpType: 5
   healthBoost: 0
+  regen: 0
   damageBoost: 0
   attackspeedboost: 0
-  speedBoost: 5
+  speedBoost: 0
   burnDamagePerSecond: 0
+  jumpBoost: 2
   burnDuration: 0
   cardIcon: {fileID: 4281637774074219296, guid: b1203b76c0b2a9540a7acd21ea523ed1, type: 3}

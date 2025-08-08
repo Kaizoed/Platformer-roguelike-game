@@ -16,9 +16,11 @@ MonoBehaviour:
   description: Increases Damage Against Enemies
   powerUpType: 1
   healthBoost: 0
-  damageBoost: 10
+  regen: 0
+  damageBoost: 1
   attackspeedboost: 0
   speedBoost: 0
   burnDamagePerSecond: 0
+  jumpBoost: 0
   burnDuration: 0
   cardIcon: {fileID: 8808545954069617921, guid: 0db3ca689b262054fa44b7f582826041, type: 3}

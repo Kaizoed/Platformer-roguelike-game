@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Regenerates Health Overtime
   powerUpType: 6
   healthBoost: 10
-  regen: 5
+  regen: 1
   damageBoost: 0
   attackspeedboost: 0
   speedBoost: 0

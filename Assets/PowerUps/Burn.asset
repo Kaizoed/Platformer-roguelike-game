@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc431a06224405e44b4a831a161cdead, type: 3}
+  m_Name: Burn
+  m_EditorClassIdentifier: 
+  powerUpName: Burn
+  description: Have a burning forcefield that damages enemies that are close to you
+    overtime
+  powerUpType: 3
+  healthBoost: 0
+  damageBoost: 0
+  attackspeedboost: 0
+  speedBoost: 0
+  burnDamagePerSecond: 5
+  burnDuration: 0
+  cardIcon: {fileID: 5597117985695365778, guid: 103d6f3946757274c818a38d5d19dae3, type: 3}

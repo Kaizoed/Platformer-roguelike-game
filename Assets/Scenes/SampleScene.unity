@@ -235,12 +235,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79660518}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 301862370}
+  m_Children:
+  - {fileID: 203521155}
+  - {fileID: 1334945819}
+  - {fileID: 1250855465}
+  - {fileID: 917089324}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &79660520
 Rigidbody2D:
@@ -250,7 +254,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79660518}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -401,12 +405,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203521154}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.65, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 301862370}
+  m_Father: {fileID: 79660519}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &228260083
 GameObject:
@@ -470,7 +474,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 228260085}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4150598803863550895}
+        m_TargetAssemblyTypeName: PlayerXP, Assembly-CSharp
+        m_MethodName: ApplyUpgrade3
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: PowerUp, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &228260085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,42 +544,6 @@ RectTransform:
   m_AnchoredPosition: {x: 109.8, y: -25.4}
   m_SizeDelta: {x: 100, y: 145}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &301862369
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 301862370}
-  m_Layer: 0
-  m_Name: FlyingEnemy
-  m_TagString: Enemy
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &301862370
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 301862369}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 79660519}
-  - {fileID: 203521155}
-  - {fileID: 1334945819}
-  - {fileID: 1250855465}
-  - {fileID: 917089324}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &346900536 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 976576648292329358, guid: 11bde568a23805e4b9ef433f6a498538, type: 3}
@@ -1243,7 +1223,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 912383473}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4150598803863550895}
+        m_TargetAssemblyTypeName: PlayerXP, Assembly-CSharp
+        m_MethodName: ApplyUpgrade2
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: PowerUp, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &917089323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,12 +1261,12 @@ Transform:
   m_GameObject: {fileID: 917089323}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.208314, z: -1.2214273}
+  m_LocalPosition: {x: 0, y: -1.14, z: 2.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 449376975}
-  m_Father: {fileID: 301862370}
+  m_Father: {fileID: 79660519}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &984513156
 GameObject:
@@ -1646,7 +1638,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 301862370}
+  m_Father: {fileID: 79660519}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1303450180
 GameObject:
@@ -1839,7 +1831,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 301862370}
+  m_Father: {fileID: 79660519}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1349260654
 GameObject:
@@ -1960,7 +1952,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1349260656}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4150598803863550895}
+        m_TargetAssemblyTypeName: PlayerXP, Assembly-CSharp
+        m_MethodName: ApplyUpgrade1
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: PowerUp, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1486321084
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,6 +2253,7 @@ GameObject:
   - component: {fileID: 1851495057}
   - component: {fileID: 1851495059}
   - component: {fileID: 1851495058}
+  - component: {fileID: 1851495060}
   m_Layer: 5
   m_Name: UpgradePanel
   m_TagString: Untagged
@@ -2317,6 +2322,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851495056}
   m_CullTransparentMesh: 1
+--- !u!114 &1851495060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851495056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525420537a2cb6845bea40c94d1c0d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availablePowerUps:
+  - {fileID: 11400000, guid: b65ba87f4702f8b479bc4ba7ad2e1c01, type: 2}
+  - {fileID: 11400000, guid: 8c510f65955601f429f43ecf10b12ad4, type: 2}
+  - {fileID: 11400000, guid: 1e2e747b83e4c1343abcf5a89ac47f00, type: 2}
+  - {fileID: 11400000, guid: 61d849a7958c9ae4f8ea8b60cbe25af3, type: 2}
+  - {fileID: 11400000, guid: dc8aefe1c2ca6f844aedde1eca0fdc4d, type: 2}
+  - {fileID: 11400000, guid: 684d2a63d3a43b149a9b7ab1d24a8b11, type: 2}
+  - {fileID: 11400000, guid: 8e88887356c20794d82f0ad687fa3db2, type: 2}
+  upgradeButtons:
+  - {fileID: 1349260658}
+  - {fileID: 912383475}
+  - {fileID: 228260084}
 --- !u!1001 &1581633017175211959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2386,6 +2415,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4231586417216634513, guid: ae0098b269040f14a94d3da775bd54dd, type: 3}
+      propertyPath: upgradePanel
+      value: 
+      objectReference: {fileID: 1851495056}
     - target: {fileID: 7783232610088692780, guid: ae0098b269040f14a94d3da775bd54dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2440,6 +2473,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3040071319970622801, guid: f10588a0650f96344a96fbd6e2381086, type: 3}
   m_PrefabInstance: {fileID: 4647079887335092202}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4150598803863550895 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1785142384066786172, guid: f10588a0650f96344a96fbd6e2381086, type: 3}
+  m_PrefabInstance: {fileID: 4647079887335092202}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71611f80504fb644da87eae0916be4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4647079887335092202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2472,6 +2516,38 @@ PrefabInstance:
       propertyPath: upgradeButton3
       value: 
       objectReference: {fileID: 228260084}
+    - target: {fileID: 1785142384066786172, guid: f10588a0650f96344a96fbd6e2381086, type: 3}
+      propertyPath: powerUps.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1785142384066786172, guid: f10588a0650f96344a96fbd6e2381086, type: 3}
+      propertyPath: 'powerUps.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: b65ba87f4702f8b479bc4ba7ad2e1c01, type: 2}
+    - target: {fileID: 1785142384066786172, guid: f10588a0650f96344a96fbd6e2381086, type: 3}
+      propertyPath: 'powerUps.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c510f65955601f429f43ecf10b12ad4, type: 2}
+    - target: {fileID: 1785142384066786172, guid: f10588a0650f96344a96fbd6e2381086, type: 3}
+      propertyPath: 'powerUps.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e2e747b83e4c1343abcf5a89ac47f00, type: 2}
+    - target: {fileID: 1785142384066786172, guid: f10588a0650f96344a96fbd6e2381086, type: 3}
+      propertyPath: 'powerUps.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 61d849a7958c9ae4f8ea8b60cbe25af3, type: 2}
+    - target: {fileID: 1785142384066786172, guid: f10588a0650f96344a96fbd6e2381086, type: 3}
+      propertyPath: 'powerUps.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: dc8aefe1c2ca6f844aedde1eca0fdc4d, type: 2}
+    - target: {fileID: 1785142384066786172, guid: f10588a0650f96344a96fbd6e2381086, type: 3}
+      propertyPath: 'powerUps.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 684d2a63d3a43b149a9b7ab1d24a8b11, type: 2}
+    - target: {fileID: 1785142384066786172, guid: f10588a0650f96344a96fbd6e2381086, type: 3}
+      propertyPath: 'powerUps.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e88887356c20794d82f0ad687fa3db2, type: 2}
     - target: {fileID: 2407498887315386191, guid: f10588a0650f96344a96fbd6e2381086, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2674,4 +2750,4 @@ SceneRoots:
   - {fileID: 1179150173}
   - {fileID: 347137294}
   - {fileID: 984513160}
-  - {fileID: 301862370}
+  - {fileID: 79660519}

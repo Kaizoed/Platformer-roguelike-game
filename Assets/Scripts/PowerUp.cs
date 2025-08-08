@@ -13,13 +13,15 @@ public class PowerUp : ScriptableObject
     [Header("Stats Modifiers")]
     public int healthBoost = 0;      // Amount to boost health (only used if powerUpType is Health or HP Regen)
     public int damageBoost = 0;      // Amount to boost damage (used for Attack power-ups)
+    public float attackspeedboost = 0; // Amount to boost attackspeed
     public float speedBoost = 0f;    // Amount to boost speed (used for Speed or Jump power-ups)
     public float burnDamagePerSecond = 0f; // Only used for Burn power-up to deal damage over time
 
     [Header("Burn Specific Settings")]
     public float burnDuration = 0f;  // How long the burn lasts (only used for Burn type)
 
-    // Add more fields depending on the power-up type
+    [Header("Card Icon")]
+    public Sprite cardIcon;          // Card icon to represent this power-up in the upgrade panel
 }
 
 public enum PowerUpType

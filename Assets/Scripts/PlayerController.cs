@@ -14,12 +14,7 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-    public static Action<GameObject> OnPlayerSpawn;
 
-    private void Awake()
-    {
-        OnPlayerSpawn?.Invoke(gameObject);
-    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

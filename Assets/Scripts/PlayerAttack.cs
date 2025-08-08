@@ -7,7 +7,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float attackRangeScaled = 0.5f;
     public LayerMask enemyLayers;
     public int attackDamage = 25;
-    public float attackCooldown = 0.5f;  // Cooldown between attacks
+    public float attackCooldown = 1f;  // Cooldown between attacks
     public float knockbackForce = 5f;    // Knockback force when enemy is hit
 
     private float nextAttackTime = 0f;   // Track when the player can attack again

@@ -28,10 +28,10 @@ public class UIWaveManager : MonoBehaviour
         playerXP.OnXPGained -= AddScore;
     }
 
-    private void BindToPlayer(GameObject player)
+    private void BindToPlayer(Player player)
     {
         // Get PlayerXP component
-        var xpComp = player.GetComponent<PlayerXP>();
+        var xpComp = player.playerXP;
         if (xpComp == null)
         {
             Debug.LogError("UIWaveManager: PlayerXP component missing on Player!");

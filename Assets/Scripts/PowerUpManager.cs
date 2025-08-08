@@ -10,7 +10,8 @@ public class PowerUpManager : MonoBehaviour
     public TextMeshProUGUI levelUpText;  // The text component that shows the level-up message
 
     private PowerUp[] selectedPowerUps;  // Store the randomly selected PowerUps
-    private PlayerXP playerXP;
+    private PlayerXP playerXP; // Reference to PlayerXP for level-up events
+
     void Start()
     {
         // Initialize the upgrade buttons' onClick listeners
@@ -20,11 +21,15 @@ public class PowerUpManager : MonoBehaviour
             upgradeButtons[i].onClick.AddListener(() => ApplyUpgrade(index));
         }
 
-        playerXP = GameManager.Instance.Player?.GetComponent<PlayerXP>();
-
+        Player player = GameManager.Instance.Player;
+        if (player == null)
+        {
+            return;
+        }
+        playerXP = player.playerXP;
         if (playerXP == null)
         {
-            Debug.LogError("Can't find PlayerXP");
+            Debug.LogError("Can't find Player XP");
             return;
         }
 
@@ -100,24 +105,14 @@ public class PowerUpManager : MonoBehaviour
     // Apply the selected PowerUp when the player clicks a button
     public void ApplyUpgrade(int i)
     {
-        PowerUp selectedPowerUp = selectedPowerUps[i];
-        Debug.Log($"{selectedPowerUp.powerUpName} Applied!");
+        Player player = GameManager.Instance.Player;
 
-        // Example: Implement what happens when the upgrade is chosen
-        // Here, you can apply the actual game logic, e.g., increase health, speed, etc.
-        // If the PowerUp is for increasing health, for example:
-        if (selectedPowerUp.powerUpType == PowerUpType.Health)
+        if (player == null)
         {
-            // Increase health logic here
-            Debug.Log($"Health increased by {selectedPowerUp.healthBoost}");
+            Debug.LogError("Can't find Player to apply upgrade");
+            return;
         }
-        else if (selectedPowerUp.powerUpType == PowerUpType.Damage)
-        {
-            // Increase damage logic here
-            Debug.Log($"Damage increased by {selectedPowerUp.damageBoost}");
-        }
-        // Add more conditions based on your PowerUp types
-
+        player.ApplyUpgrade(selectedPowerUps[i]);
         // Close the upgrade panel
         HideUpgradePanel();
     }

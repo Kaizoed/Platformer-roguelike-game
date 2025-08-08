@@ -8,10 +8,6 @@ public class PlayerXP : MonoBehaviour
     public int currentXP = 0;
     public int xpToLevelUp = 100;
 
-    [Header("UI Settings")]
-    public Image xpFillImage;   // For updating the XP bar
-    public List<PowerUp> powerUps = new List<PowerUp>(); // Array of power-up the player received
-
     public event System.Action<int, int> OnXPChanged;
     public event System.Action<int> OnXPGained;
     public event System.Action OnLevelUp;
@@ -44,25 +40,5 @@ public class PlayerXP : MonoBehaviour
     {
         Debug.Log("[PlayerXP] Leveled Up!");
         OnLevelUp?.Invoke();
-    }
-
-    /// <summary> Example upgrade logic for Button 1 </summary>
-    public void ApplyUpgrade(PowerUp selectedPowerUp)
-    {
-        Debug.Log($"{selectedPowerUp.powerUpName} Applied!");
-
-        // Implement upgrade logic here, e.g., increase health, damage, etc.
-        if (selectedPowerUp.powerUpType == PowerUpType.Health)
-        {
-            // Example: Increase health
-            // playerHealth += selectedPowerUp.healthBoost;
-        }
-        else if (selectedPowerUp.powerUpType == PowerUpType.Damage)
-        {
-            // Example: Increase damage
-            // playerDamage += selectedPowerUp.damageBoost;
-        }
-        // Add more logic based on the power-up type
-
     }
 }

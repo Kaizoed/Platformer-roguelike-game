@@ -12,11 +12,12 @@ public class PowerUp : ScriptableObject
 
     [Header("Stats Modifiers")]
     public int healthBoost = 0;      // Amount to boost health (only used if powerUpType is Health or HP Regen)
+    public int regen = 0;            // Amount to regen;
     public int damageBoost = 0;      // Amount to boost damage (used for Attack power-ups)
-    public float attackspeedboost = 0; // Amount to boost attackspeed
+    public float attackspeedboost = 0; // Amount to boost attackspeed in percent
     public float speedBoost = 0f;    // Amount to boost speed (used for Speed or Jump power-ups)
     public float burnDamagePerSecond = 0f; // Only used for Burn power-up to deal damage over time
-
+    public float jumpBoost = 0f;    // Amount to boost jump
     [Header("Burn Specific Settings")]
     public float burnDuration = 0f;  // How long the burn lasts (only used for Burn type)
 

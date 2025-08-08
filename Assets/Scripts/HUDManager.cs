@@ -31,7 +31,11 @@ public class HUDManager : MonoBehaviour
 
     private void OnDisable()
     {
-        if (playerHP != null) playerHP.OnDamage -= UpdateHealth;
+        if (playerHP != null)
+        {
+            playerHP.OnDamage -= UpdateHealth;
+            playerHP.OnHeal -= UpdateHealth;
+        }
         if (playerXP != null) playerXP.OnXPChanged -= UpdateXPBar;
         WaveManager.OnNextWave -= SetWave;
     }
@@ -41,7 +45,7 @@ public class HUDManager : MonoBehaviour
         playerXP.OnXPGained -= AddScore;
     }
 
-    private void SetTarget(GameObject target)
+    private void SetTarget(Player target)
     {
         if (target == null)
         {
@@ -49,16 +53,17 @@ public class HUDManager : MonoBehaviour
             return;
         }
         
-        if (target.TryGetComponent<Damageable>(out var _playerHP))
+        if (target.playerHP != null)
         {
-            playerHP = _playerHP;
+            playerHP = target.playerHP;
             playerHP.OnDamage += UpdateHealth;
+            playerHP.OnHeal += UpdateHealth;
             UpdateHealth(playerHP);
         }
 
-        if (target.TryGetComponent<PlayerXP>(out var _playerXP))
+        if (target.playerXP != null)
         {
-            playerXP = _playerXP;
+            playerXP = target.playerXP;
             playerXP.OnXPChanged += UpdateXPBar;
             playerXP.OnXPGained += AddScore;
             UpdateXPBar(playerXP.currentXP, playerXP.xpToLevelUp);

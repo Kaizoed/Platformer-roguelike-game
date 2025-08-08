@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    private GameObject player;
-    public GameObject Player
+    private Player player;
+    public Player Player
     {
         get
         {
@@ -29,15 +29,15 @@ public class GameManager : Singleton<GameManager>
 
     private void OnEnable()
     {
-        PlayerController.OnPlayerSpawn += SetPlayer;
+        Player.OnPlayerSpawn += SetPlayer;
     }
 
     private void OnDisable()
     {
-        PlayerController.OnPlayerSpawn -= SetPlayer;
+        Player.OnPlayerSpawn -= SetPlayer;
     }
 
-    void SetPlayer(GameObject player)
+    void SetPlayer(Player player)
     {
         Player = player;
     }

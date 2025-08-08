@@ -53,9 +53,6 @@ public class PlayerXP : MonoBehaviour
             LevelUp();
         }
 
-        // Update the XP bar
-        UpdateXPBar();
-
         OnXPChanged?.Invoke(currentXP, xpToLevelUp);
     }
 
@@ -68,15 +65,6 @@ public class PlayerXP : MonoBehaviour
         ShowUpgradePanel();
 
         // Call additional level-up logic here (e.g., increase stats, unlock abilities, etc.)
-    }
-
-    /// <summary> Updates the XP Bar UI </summary>
-    void UpdateXPBar()
-    {
-        if (xpFillImage != null)
-        {
-            xpFillImage.fillAmount = (float)currentXP / xpToLevelUp;
-        }
     }
 
     /// <summary> Shows the upgrade panel when the player levels up </summary>

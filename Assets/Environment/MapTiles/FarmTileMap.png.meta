@@ -1,19 +1,91 @@
 fileFormatVersion: 2
-guid: 70013b6f75ed905498f4dfa31574aaa9
+guid: e810b1a3fb23c1442a0a1d2c0e2bd03e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7571612729290223089
-    second: BigTile_0
+      213: 7409867391127700363
+    second: FarmTiles_0
   - first:
-      213: -2232055258198627545
-    second: BigTile_1
+      213: 508341731208496878
+    second: FarmTiles_1
   - first:
-      213: -8739746920305854122
-    second: BigTile_2
+      213: -8474714856002961438
+    second: FarmTiles_2
   - first:
-      213: -728874242549117805
-    second: BigTile_3
+      213: 7815971248164484473
+    second: FarmTiles_3
+  - first:
+      213: -2975704637407596564
+    second: FarmTiles_4
+  - first:
+      213: -8735640262156497460
+    second: FarmTiles_5
+  - first:
+      213: 6170514064372809499
+    second: FarmTiles_6
+  - first:
+      213: 6459329641719832852
+    second: FarmTiles_7
+  - first:
+      213: -2460961585382850678
+    second: FarmTiles_8
+  - first:
+      213: -5676634784946309266
+    second: FarmTiles_9
+  - first:
+      213: -7118924201667285306
+    second: FarmTiles_10
+  - first:
+      213: -3332316689646092343
+    second: FarmTiles_11
+  - first:
+      213: 2695335022072540798
+    second: FarmTiles_12
+  - first:
+      213: -7792865547010833594
+    second: FarmTiles_13
+  - first:
+      213: 7098064550336567465
+    second: FarmTiles_14
+  - first:
+      213: 3228841599589127138
+    second: FarmTiles_15
+  - first:
+      213: 3050460170992004465
+    second: FarmTiles_16
+  - first:
+      213: 8136795705632155625
+    second: FarmTiles_17
+  - first:
+      213: 3820312189394639809
+    second: FarmTiles_18
+  - first:
+      213: 2650008974566755908
+    second: FarmTiles_19
+  - first:
+      213: -4917958131687517727
+    second: FarmTiles_20
+  - first:
+      213: 5946115071063112389
+    second: FarmTiles_21
+  - first:
+      213: 2439655689227932091
+    second: FarmTiles_22
+  - first:
+      213: -2394240983385533648
+    second: FarmTiles_23
+  - first:
+      213: -3307011771288611172
+    second: FarmTiles_24
+  - first:
+      213: 4763272641388441678
+    second: FarmTiles_25
+  - first:
+      213: 8158444978671516841
+    second: FarmTiles_26
+  - first:
+      213: -1436692416737398451
+    second: FarmTiles_27
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +118,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +132,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,89 +181,79 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BigTile_0
+      name: FarmTiles_0
       rect:
         serializedVersion: 2
-        x: 2284
-        y: 3655
-        width: 10
-        height: 22
+        x: 0
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
-      tessellationDetail: -1
+      physicsShape:
+      - - {x: -400, y: 174}
+        - {x: 400, y: 11}
+        - {x: 400, y: 234}
+        - {x: -400, y: 234}
+      tessellationDetail: 1
       bones: []
-      spriteID: 1fd6b2249a5c31960800000000000000
-      internalID: 7571612729290223089
+      spriteID: f7cdccc4cffe80345b5ef995213b525c
+      internalID: 1516319596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigTile_1
+      name: FarmTiles_1
       rect:
         serializedVersion: 2
-        x: 2283
-        y: 3577
-        width: 10
-        height: 42
+        x: 800
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
-      tessellationDetail: -1
+      physicsShape:
+      - - {x: -400, y: 11}
+        - {x: 400, y: 11}
+        - {x: 400, y: 234}
+        - {x: -400, y: 234}
+      tessellationDetail: 0
       bones: []
-      spriteID: 72b270091952601e0800000000000000
-      internalID: -2232055258198627545
+      spriteID: 9475754813409114ca5039192b10cebf
+      internalID: 1824500490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigTile_2
+      name: FarmTiles_2
       rect:
         serializedVersion: 2
-        x: 2284
-        y: 3619
-        width: 11
-        height: 35
+        x: 1600
+        y: 0
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
-      tessellationDetail: -1
+      physicsShape:
+      - - {x: -400, y: 11}
+        - {x: 400, y: 174}
+        - {x: 400, y: 234}
+        - {x: -400, y: 234}
+      tessellationDetail: 0
       bones: []
-      spriteID: 659fa5c2b7e26b680800000000000000
-      internalID: -8739746920305854122
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BigTile_3
-      rect:
-        serializedVersion: 2
-        x: 1663
-        y: 2968
-        width: 656
-        height: 603
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 39c8de6fcb482e5f0800000000000000
-      internalID: -728874242549117805
+      spriteID: 844bb783208767344906f6a6e738addc
+      internalID: 71758528
       vertices: []
       indices: 
       edges: []
@@ -200,7 +262,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 15d5d9186680b7a4b8748346c472b3c4
     internalID: 0
     vertices: []
     indices: 
@@ -209,7 +271,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FarmTiles_0: 1516319596
+      FarmTiles_1: 1824500490
+      FarmTiles_2: 71758528
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5e3d51959e34bad448559ea8fd222700
+guid: 5d53c2b465bef0c469131a62588c854c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1897803016619529
-    second: SmallTile_0
+      213: -6695950386315148514
+    second: BG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SmallTile_0
+      name: BG_0
       rect:
         serializedVersion: 2
-        x: 1673
-        y: 2588
-        width: 247
-        height: 271
+        x: 0
+        y: 0
+        width: 8887
+        height: 4695
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 906c8a2ba0eb60000800000000000000
-      internalID: 1897803016619529
+      spriteID: e13cb0ea9943313a0800000000000000
+      internalID: -6695950386315148514
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BG_0: -6695950386315148514
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

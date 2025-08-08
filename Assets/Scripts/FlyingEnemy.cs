@@ -31,7 +31,13 @@ public class FlyingEnemy : MonoBehaviour
 
     void Update()
     {
-        if (player == null) return;
+        // If these were never assigned in the Inspector (because you're using a prefab),
+        // find them by tag or name in the scene:
+        if (player == null)
+        {
+            Player _player = GameManager.Instance.Player;
+            if (_player != null) player = _player.transform;
+        }
 
         // Patrol logic: Move back and forth between left and right points
         Patrol();

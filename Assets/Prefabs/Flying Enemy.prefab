@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 387539638982611697}
   - component: {fileID: 6371515392995454317}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: HealthBarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6704420874720838080}
   - component: {fileID: 2270115425063850544}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: HealthBarBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 2258496551936326209}
   m_Layer: 0
   m_Name: Flying Enemy
-  m_TagString: Untagged
+  m_TagString: FlyingEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,10 +251,12 @@ GameObject:
   - component: {fileID: 3022605107058761177}
   - component: {fileID: 3318130732463378512}
   - component: {fileID: 1196812422338417489}
+  - component: {fileID: 3949688628629844008}
   - component: {fileID: 7850820634536325595}
   - component: {fileID: 4897754002823813477}
   - component: {fileID: 2212207288283363882}
-  m_Layer: 0
+  - component: {fileID: 478406101657900852}
+  m_Layer: 8
   m_Name: Flying Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -360,6 +362,52 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &3949688628629844008
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4881745841944101385}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.7375, y: 3.2125}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &7850820634536325595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,8 +444,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d053b8b45b1b9f146b0f792e2384731f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
   maxHealth: 10
   currentHealth: 0
+  regen: 0
+  regenTime: 1
   knockbackResistance: 1
   worldHealthBarFill: {fileID: 387539638982611697}
 --- !u!114 &2212207288283363882
@@ -413,6 +464,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xpValue: 20
+--- !u!95 &478406101657900852
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4881745841944101385}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5934411557999787073
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6088735147919250297}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: HealthBarContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

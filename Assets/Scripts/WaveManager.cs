@@ -53,7 +53,7 @@ public class WaveManager : MonoBehaviour
         yield return new WaitForSeconds(timeBeforeWave);
 
         // Spawn enemies based on wave
-        for (int i = 0; i < spawnCountInit; i++)
+        for (int i = 0; i < spawnCountCurr; i++)
         {
             // Check if it's wave 5 or greater and spawn randomly
             if (wave >= 5)

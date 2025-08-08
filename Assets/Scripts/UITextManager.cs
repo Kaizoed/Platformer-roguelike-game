@@ -14,17 +14,16 @@ public class UIWaveManager : MonoBehaviour
 
     private void Start()
     {
+        BindToPlayer(GameManager.Instance.Player);
     }
 
     private void OnEnable()
     {
         WaveManager.OnNextWave += SetWave;
-        PlayerController.OnPlayerSpawn += BindToPlayer;
     }
 
     private void OnDestroy()
     {
-        PlayerController.OnPlayerSpawn -= BindToPlayer;
         WaveManager.OnNextWave -= SetWave;
         playerXP.OnXPGained -= AddScore;
     }

@@ -7,29 +7,75 @@ public class PowerUpManager : MonoBehaviour
     [Header("PowerUp Settings")]
     public PowerUp[] availablePowerUps;  // Array of all available PowerUps
     public Button[] upgradeButtons;      // The buttons for the upgrades
-    private PowerUp[] selectedPowerUps;  // Store the randomly selected PowerUps
+    public TextMeshProUGUI levelUpText;  // The text component that shows the level-up message
 
+    private PowerUp[] selectedPowerUps;  // Store the randomly selected PowerUps
+    private PlayerXP playerXP;
     void Start()
     {
         // Initialize the upgrade buttons' onClick listeners
         for (int i = 0; i < upgradeButtons.Length; i++)
         {
             int index = i;  // Capture the correct index in a local variable for the listener
-            upgradeButtons[i].onClick.AddListener(() => ApplyUpgrade(selectedPowerUps[index]));
+            upgradeButtons[i].onClick.AddListener(() => ApplyUpgrade(index));
         }
+
+        playerXP = GameManager.Instance.Player?.GetComponent<PlayerXP>();
+
+        if (playerXP == null)
+        {
+            Debug.LogError("Can't find PlayerXP");
+            return;
+        }
+
+        playerXP.OnLevelUp += ShowUpgradePanel;
+
+        HideUpgradePanel();
     }
 
-    // Randomly selects a specified number of PowerUps and assigns them to the buttons
-    public void RandomizePowerUps(int count)
+    private void OnDestroy()
     {
-        selectedPowerUps = GetRandomPowerUps(count);
+        playerXP.OnLevelUp -= ShowUpgradePanel;
+    }
 
-        // Assign the PowerUp icons and names to the buttons
-        for (int i = 0; i < upgradeButtons.Length; i++)
+    /// <summary> Shows the upgrade panel when the player levels up </summary>
+    void ShowUpgradePanel()
+    {
+        if (!gameObject.activeSelf) // only pause once for upgrade panel
         {
-            // Set the button icon
-            upgradeButtons[i].GetComponent<Image>().sprite = selectedPowerUps[i].cardIcon;
+            // Pause the game when showing upgrades
+            GameManager.Instance.PauseGame(true);
+        }
 
+        gameObject.SetActive(true); // Display the upgrade panel
+        levelUpText.text = "Level Up! Choose Your Upgrade!"; // Update text on panel
+
+        // Set card icons for the buttons
+        SetUpgradeCardIcons();
+    }
+
+    /// <summary> Hides the upgrade panel after player chooses upgrades </summary>
+    public void HideUpgradePanel()
+    {
+        if (gameObject.activeSelf) // only unpause once for upgrade panel
+        {
+            // Unpause the game after upgrades are chosen
+            GameManager.Instance.PauseGame(false);
+        }
+        gameObject.SetActive(false); // Hide the upgrade panel after upgrade choices
+
+    }
+
+    /// <summary> Sets the card icons to the buttons on the upgrade panel </summary>
+    void SetUpgradeCardIcons()
+    {
+        // Randomly pick 3 power-ups from the available power-ups.
+        selectedPowerUps = GetRandomPowerUps(3);
+
+        // Assign the power-up card icons to the buttons
+        for (int i = 0; i < selectedPowerUps.Length; i++)
+        {
+            upgradeButtons[i].GetComponent<Image>().sprite = selectedPowerUps[i].cardIcon;
             // Set the button text
             TextMeshProUGUI buttonText = upgradeButtons[i].GetComponentInChildren<TextMeshProUGUI>();
             if (buttonText != null)
@@ -52,8 +98,9 @@ public class PowerUpManager : MonoBehaviour
     }
 
     // Apply the selected PowerUp when the player clicks a button
-    public void ApplyUpgrade(PowerUp selectedPowerUp)
+    public void ApplyUpgrade(int i)
     {
+        PowerUp selectedPowerUp = selectedPowerUps[i];
         Debug.Log($"{selectedPowerUp.powerUpName} Applied!");
 
         // Example: Implement what happens when the upgrade is chosen
@@ -72,6 +119,6 @@ public class PowerUpManager : MonoBehaviour
         // Add more conditions based on your PowerUp types
 
         // Close the upgrade panel
-        GameManager.Instance.HideUpgradePanel();
+        HideUpgradePanel();
     }
 }

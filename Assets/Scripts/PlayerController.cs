@@ -16,12 +16,15 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public static Action<GameObject> OnPlayerSpawn;
 
+    private void Awake()
+    {
+        OnPlayerSpawn?.Invoke(gameObject);
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        OnPlayerSpawn?.Invoke(gameObject);
     }
 
     void Update()

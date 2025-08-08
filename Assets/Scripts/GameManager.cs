@@ -2,11 +2,20 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    public GameObject Player { get; private set; }
-    [SerializeField] private Transform playerSpawnPoint;
-
-    // Reference to the Upgrade Panel
-    [SerializeField] private GameObject upgradePanel;  // Add this line
+    private GameObject player;
+    public GameObject Player
+    {
+        get
+        {
+            if (player == null)
+            {
+                Debug.LogError("Can't find player, but player is being accessed");
+            }
+            return player;
+        }
+        set => player = value;
+    }
+    private int pauseCount = 0;
 
     protected override void Awake()
     {
@@ -33,21 +42,24 @@ public class GameManager : Singleton<GameManager>
         Player = player;
     }
 
-    // Method to hide the upgrade panel
-    public void HideUpgradePanel()
+    /// <summary> Pause or Unpause the game </summary>
+    public void PauseGame(bool pause)
     {
-        if (upgradePanel != null)
-        {
-            upgradePanel.SetActive(false);  // This will hide the upgrade panel
-        }
-    }
+        if (pause)
+            pauseCount++;
+        else 
+            pauseCount--;
+        pauseCount = Mathf.Max(pauseCount, 0); // value won't go below 0;
 
-    // Optional: Show upgrade panel if needed in future
-    public void ShowUpgradePanel()
-    {
-        if (upgradePanel != null)
+        if (pauseCount == 0)
         {
-            upgradePanel.SetActive(true);  // This will show the upgrade panel
+            Time.timeScale = 1f; // resume
+            Debug.Log($"Game Unpaused: {pause}");
+        }
+        else
+        {
+            Time.timeScale = 0f; // Set the time scale to 0 to pause, or 1 to unpause
+            Debug.Log($"Game Paused or still paused: {pause}");
         }
     }
 }

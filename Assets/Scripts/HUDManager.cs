@@ -20,17 +20,17 @@ public class HUDManager : MonoBehaviour
     private void Start()
     {
         hudLowHP.SetActive(false);
+
+        SetTarget(GameManager.Instance.Player);
     }
 
     private void OnEnable()
     {
-        PlayerController.OnPlayerSpawn += SetTarget;
         WaveManager.OnNextWave += SetWave;
     }
 
     private void OnDisable()
     {
-        PlayerController.OnPlayerSpawn -= SetTarget;
         if (playerHP != null) playerHP.OnDamage -= UpdateHealth;
         if (playerXP != null) playerXP.OnXPChanged -= UpdateXPBar;
         WaveManager.OnNextWave -= SetWave;
@@ -43,6 +43,12 @@ public class HUDManager : MonoBehaviour
 
     private void SetTarget(GameObject target)
     {
+        if (target == null)
+        {
+            Debug.LogError("Target is null");
+            return;
+        }
+        
         if (target.TryGetComponent<Damageable>(out var _playerHP))
         {
             playerHP = _playerHP;

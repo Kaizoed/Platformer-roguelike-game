@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // For TMP (TextMeshPro) support
+using System.Collections.Generic;
 
 public class PlayerXP : MonoBehaviour
 {
@@ -10,25 +10,11 @@ public class PlayerXP : MonoBehaviour
 
     [Header("UI Settings")]
     public Image xpFillImage;   // For updating the XP bar
-    public GameObject upgradePanel;  // The upgrade panel to show when leveling up
-    public TextMeshProUGUI levelUpText;  // The text component that shows the level-up message
-    public Button upgradeButton1; // Optional Button 1
-    public Button upgradeButton2; // Optional Button 2
-    public Button upgradeButton3; // Optional Button 3
-
-    public PowerUp[] powerUps; // Array of power-up options for the player to choose from
+    public List<PowerUp> powerUps = new List<PowerUp>(); // Array of power-up the player received
 
     public event System.Action<int, int> OnXPChanged;
     public event System.Action<int> OnXPGained;
-
-    void Start()
-    {
-        // Ensure the panel is inactive at the start
-        if (upgradePanel != null)
-        {
-            upgradePanel.SetActive(false);
-        }
-    }
+    public event System.Action OnLevelUp;
 
     /// <summary>Adds XP, handles level-up rollover, and refreshes the bar.</summary>
     public void GainXP(int amount)
@@ -57,87 +43,11 @@ public class PlayerXP : MonoBehaviour
     void LevelUp()
     {
         Debug.Log("[PlayerXP] Leveled Up!");
-
-        // Show the Upgrade Panel when leveling up
-        ShowUpgradePanel();
-
-        // Pause the game when the upgrade panel is shown
-        PauseGame(true);
-    }
-
-    /// <summary> Shows the upgrade panel when the player levels up </summary>
-    void ShowUpgradePanel()
-    {
-        if (upgradePanel != null)
-        {
-            upgradePanel.SetActive(true); // Display the upgrade panel
-            levelUpText.text = "Level Up! Choose Your Upgrade!"; // Update text on panel
-
-            // Set card icons for the buttons
-            SetUpgradeCardIcons();
-
-            // Optionally disable the upgrade buttons if needed
-            upgradeButton1.interactable = true; // Enable Button1
-            upgradeButton2.interactable = true; // Enable Button2
-            upgradeButton3.interactable = true; // Enable Button3
-        }
-    }
-
-    /// <summary> Sets the card icons to the buttons on the upgrade panel </summary>
-    void SetUpgradeCardIcons()
-    {
-        // Randomly pick 3 power-ups from the available power-ups.
-        PowerUp[] selectedPowerUps = GetRandomPowerUps(3);
-
-        // Assign the power-up card icons to the buttons
-        upgradeButton1.GetComponent<Image>().sprite = selectedPowerUps[0].cardIcon;
-        upgradeButton2.GetComponent<Image>().sprite = selectedPowerUps[1].cardIcon;
-        upgradeButton3.GetComponent<Image>().sprite = selectedPowerUps[2].cardIcon;
-
-        // Remove any old listeners that might have been assigned previously
-        upgradeButton1.onClick.RemoveAllListeners();
-        upgradeButton2.onClick.RemoveAllListeners();
-        upgradeButton3.onClick.RemoveAllListeners();
-
-        // Dynamically add listeners to the buttons for each upgrade option
-        upgradeButton1.onClick.AddListener(() => ApplyUpgrade1(selectedPowerUps[0]));
-        upgradeButton2.onClick.AddListener(() => ApplyUpgrade2(selectedPowerUps[1]));
-        upgradeButton3.onClick.AddListener(() => ApplyUpgrade3(selectedPowerUps[2]));
-    }
-
-    /// <summary> Randomly selects a given number of PowerUps from the available ones </summary>
-    PowerUp[] GetRandomPowerUps(int count)
-    {
-        PowerUp[] selectedPowerUps = new PowerUp[count];
-        for (int i = 0; i < count; i++)
-        {
-            int randomIndex = Random.Range(0, powerUps.Length);
-            selectedPowerUps[i] = powerUps[randomIndex];
-        }
-        return selectedPowerUps;
-    }
-
-    /// <summary> Hides the upgrade panel after player chooses upgrades </summary>
-    public void HideUpgradePanel()
-    {
-        if (upgradePanel != null)
-        {
-            upgradePanel.SetActive(false); // Hide the upgrade panel after upgrade choices
-        }
-
-        // Unpause the game after upgrades are chosen
-        PauseGame(false);
-    }
-
-    /// <summary> Pause or Unpause the game </summary>
-    private void PauseGame(bool pause)
-    {
-        Time.timeScale = pause ? 0f : 1f; // Set the time scale to 0 to pause, or 1 to unpause
-        Debug.Log($"Game Paused: {pause}");
+        OnLevelUp?.Invoke();
     }
 
     /// <summary> Example upgrade logic for Button 1 </summary>
-    public void ApplyUpgrade1(PowerUp selectedPowerUp)
+    public void ApplyUpgrade(PowerUp selectedPowerUp)
     {
         Debug.Log($"{selectedPowerUp.powerUpName} Applied!");
 
@@ -154,36 +64,5 @@ public class PlayerXP : MonoBehaviour
         }
         // Add more logic based on the power-up type
 
-        HideUpgradePanel();  // Hide the panel after the upgrade
-    }
-
-    public void ApplyUpgrade2(PowerUp selectedPowerUp)
-    {
-        Debug.Log($"{selectedPowerUp.powerUpName} Applied!");
-
-        // Implement upgrade logic here
-        if (selectedPowerUp.powerUpType == PowerUpType.Speed)
-        {
-            // Example: Increase speed
-            // playerSpeed += selectedPowerUp.speedBoost;
-        }
-        // Add more logic based on the power-up type
-
-        HideUpgradePanel();  // Hide the panel after the upgrade
-    }
-
-    public void ApplyUpgrade3(PowerUp selectedPowerUp)
-    {
-        Debug.Log($"{selectedPowerUp.powerUpName} Applied!");
-
-        // Implement upgrade logic here
-        if (selectedPowerUp.powerUpType == PowerUpType.Burn)
-        {
-            // Example: Activate burn effect
-            // ActivateBurn(selectedPowerUp);
-        }
-        // Add more logic based on the power-up type
-
-        HideUpgradePanel();  // Hide the panel after the upgrade
     }
 }
